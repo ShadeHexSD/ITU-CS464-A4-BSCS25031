@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &213561598 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4762736781376262930, guid: 07690ab878c52784caf1756863307d48, type: 3}
-  m_PrefabInstance: {fileID: 401956731}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &401956731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,15 +294,16 @@ PrefabInstance:
     - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
       propertyPath: winRestartButton
       value: 
-      objectReference: {fileID: 213561598}
+      objectReference: {fileID: 0}
     - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
       propertyPath: loseRestartButton
       value: 
-      objectReference: {fileID: 484430605}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 645026818730794423, guid: 07690ab878c52784caf1756863307d48, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4640531601331107765, guid: 07690ab878c52784caf1756863307d48, type: 3}
+    - {fileID: 6214064098390383566, guid: 07690ab878c52784caf1756863307d48, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 760956540710975910, guid: 07690ab878c52784caf1756863307d48, type: 3}
@@ -586,17 +576,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &484430605 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7511274896634181967, guid: 07690ab878c52784caf1756863307d48, type: 3}
-  m_PrefabInstance: {fileID: 401956731}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &516530306
 GameObject:
   m_ObjectHideFlags: 0

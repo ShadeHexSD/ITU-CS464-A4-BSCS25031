@@ -12,7 +12,7 @@ public class MixerApply : MonoBehaviour
     {
         foreach (string p in parameters)
         {
-            float v = Mathf.Max(0.0001f, PlayerPrefs.GetFloat(p, 1f));
+            float v = SaveData.Volume(p);
             mixer.SetFloat(p, Mathf.Log10(v) * 20f);
         }
     }

@@ -232,17 +232,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &222028595 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4517558253132293383, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
-  m_PrefabInstance: {fileID: 468676819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &468676819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,11 +287,11 @@ PrefabInstance:
     - target: {fileID: 1990106210623224785, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
       propertyPath: winRestartButton
       value: 
-      objectReference: {fileID: 1064840759}
+      objectReference: {fileID: 0}
     - target: {fileID: 1990106210623224785, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
       propertyPath: loseRestartButton
       value: 
-      objectReference: {fileID: 222028595}
+      objectReference: {fileID: 0}
     - target: {fileID: 2224218259611987389, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -445,7 +434,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7bc269d6a854d534a8144106cee4ee14, type: 2}
     m_RemovedComponents:
     - {fileID: 3859292657030894383, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 49598611808634758, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3519187827272912685, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
@@ -853,17 +843,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1064840759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1482911527110135642, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
-  m_PrefabInstance: {fileID: 468676819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1088052995
 GameObject:
   m_ObjectHideFlags: 0

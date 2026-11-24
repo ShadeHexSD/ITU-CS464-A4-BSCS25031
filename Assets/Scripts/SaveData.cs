@@ -27,4 +27,22 @@ public static class SaveData
         PlayerPrefs.Save();
         return true;
     }
+
+    // Audio volumes are memory too (D2): these keys are spelled here only.
+    const string MusicVolumeKey = "MusicVolume";
+    const string SfxVolumeKey = "SfxVolume";
+
+    public static float MusicVolume => PlayerPrefs.GetFloat(MusicVolumeKey, 1f);
+    public static float SfxVolume => PlayerPrefs.GetFloat(SfxVolumeKey, 1f);
+
+    // The mixer parameter name is also the storage key; keep the mapping in one place.
+    public static float Volume(string parameter) =>
+        parameter == SfxVolumeKey ? SfxVolume : MusicVolume;
+
+    public static void SetVolume(string parameter, float value)
+    {
+        string key = parameter == SfxVolumeKey ? SfxVolumeKey : MusicVolumeKey;
+        PlayerPrefs.SetFloat(key, Mathf.Clamp(value, 0.0001f, 1f));
+        PlayerPrefs.Save();
+    }
 }

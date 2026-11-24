@@ -13,7 +13,7 @@ public class VolumeSlider : MonoBehaviour
 
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat(parameter, 1f);
+        slider.value = SaveData.Volume(parameter);
         slider.onValueChanged.AddListener(Set);
         Set(slider.value);
     }
@@ -21,6 +21,6 @@ public class VolumeSlider : MonoBehaviour
     void Set(float value)
     {
         mixer.SetFloat(parameter, Mathf.Log10(value) * 20f);   // 1 -> 0 dB, 0.5 -> -6 dB, 0.0001 -> -80 dB
-        PlayerPrefs.SetFloat(parameter, value);
+        SaveData.SetVolume(parameter, value);
     }
 }
