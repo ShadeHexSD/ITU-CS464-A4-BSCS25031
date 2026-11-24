@@ -1199,6 +1199,10 @@ PrefabInstance:
       propertyPath: loseRestartButton
       value: 
       objectReference: {fileID: 1187568754}
+    - target: {fileID: 2756955461401290033, guid: 6ac240b0b7fcc5845b501c2457ca85a0, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 4211547132762631984, guid: 6ac240b0b7fcc5845b501c2457ca85a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.39213705

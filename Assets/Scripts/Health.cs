@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public bool shielded;
     public event Action<int, int> Damaged;
     public event Action<int, int> Healed;
+    public event Action Died;
     public UnityEvent onDied;
     int current;
     float invulnerableUntil;
@@ -33,34 +34,29 @@ public class Health : MonoBehaviour
         Damaged?.Invoke(current, max);
         GameEvents.RaisePlayerDamaged(current, max);
 
+        // Announce death once, whatever manager happens to be in the scene.
+        if (current <= 0)
+        {
+            Died?.Invoke();
+            onDied?.Invoke();
+        }
+
         // Notify GameManager to deduct life & handle respawn
         if (GameManager.Instance != null)
         {
             GameManager.Instance.UpdateUI();
-            if (current <= 0)
-            {
-                onDied?.Invoke();
-                GameManager.Instance.PlayerDied();
-            }
+            if (current <= 0) GameManager.Instance.PlayerDied();
         }
         else if (GameManager_03.Instance != null)
         {
             GameManager_03.Instance.UpdateUI();
-            if (current <= 0)
-            {
-                onDied?.Invoke();
-                GameManager_03.Instance.PlayerDied();
-            }
+            if (current <= 0) GameManager_03.Instance.PlayerDied();
         }
-        else
+        else if (current <= 0)
         {
             // If standalone without GameManager, onDied triggers Game Over
-            if (current <= 0)
-            {
-                onDied?.Invoke();
-                EndScreens endScreens = FindAnyObjectByType<EndScreens>();
-                if (endScreens != null) endScreens.ShowGameOver();
-            }
+            EndScreens endScreens = FindAnyObjectByType<EndScreens>();
+            if (endScreens != null) endScreens.ShowGameOver();
         }
 
         return true;

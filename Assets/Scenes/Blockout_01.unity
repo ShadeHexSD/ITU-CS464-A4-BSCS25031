@@ -379,6 +379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blockout_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4384003414382893474, guid: 093fe839515f0c94da505bc9b6263ea7, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 5622078658627044844, guid: 093fe839515f0c94da505bc9b6263ea7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0245647

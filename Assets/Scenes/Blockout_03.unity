@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: strikeVisual
       value: 
       objectReference: {fileID: 194665493}
+    - target: {fileID: 5763586636808605543, guid: fec9ef993695aea48a203ad7492ee449, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 6324524820319080241, guid: fec9ef993695aea48a203ad7492ee449, type: 3}
       propertyPath: strikeVisual
       value: 

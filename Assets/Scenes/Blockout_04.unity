@@ -138,6 +138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 165441309501321621, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 877348243071026218, guid: 007652dc4e916ba42bd781cbf6cfe1e9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
