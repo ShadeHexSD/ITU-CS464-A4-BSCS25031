@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6831731541981036060}
   - component: {fileID: 6089570880250979739}
   - component: {fileID: -1506684262072757944}
-  - component: {fileID: -3638658724076369444}
+  - component: {fileID: 6476220993371051081}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -220,8 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ecb2a9f2b080c4681fcbcf04adab9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveForce: 10
---- !u!114 &-3638658724076369444
+  speed: 5
+--- !u!114 &6476220993371051081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,9 +230,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4795333712826943382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec59a1ea1aa6cbe45ad7cfba8d06e33d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a3a1bf9fdd239a4592834de4b57ff2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max: 3
   iFrames: 1
   shielded: 0
+  onDied:
+    m_PersistentCalls:
+      m_Calls: []

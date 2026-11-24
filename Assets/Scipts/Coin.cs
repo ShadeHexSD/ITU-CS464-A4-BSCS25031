@@ -14,11 +14,24 @@ public class Coin : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (collected || !other.CompareTag("Player") || GameManager.Instance == null)
+        if (collected || !other.CompareTag("Player"))
             return;
 
         collected = true;
-        GameManager.Instance.AddScore(value);
+
+        // Lecture event for ScoreListener & HUD
+        GameEvents.RaiseCoinCollected(value);
+
+        // Keep backwards compatibility with GameManager if present
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(value);
+        }
+        else if (GameManager_03.Instance != null)
+        {
+            GameManager_03.Instance.AddScore(value);
+        }
+
         Destroy(gameObject);
     }
 }
