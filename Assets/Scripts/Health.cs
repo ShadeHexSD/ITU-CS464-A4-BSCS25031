@@ -33,19 +33,36 @@ public class Health : MonoBehaviour
         Damaged?.Invoke(current, max);
         GameEvents.RaisePlayerDamaged(current, max);
 
-        // Keep backwards compatibility with GameManager and Level 3 GameManager
+        // Notify GameManager to deduct life & handle respawn
         if (GameManager.Instance != null)
         {
             GameManager.Instance.UpdateUI();
-            if (current <= 0) GameManager.Instance.PlayerDied();
+            if (current <= 0)
+            {
+                onDied?.Invoke();
+                GameManager.Instance.PlayerDied();
+            }
         }
         else if (GameManager_03.Instance != null)
         {
             GameManager_03.Instance.UpdateUI();
-            if (current <= 0) GameManager_03.Instance.PlayerDied();
+            if (current <= 0)
+            {
+                onDied?.Invoke();
+                GameManager_03.Instance.PlayerDied();
+            }
+        }
+        else
+        {
+            // If standalone without GameManager, onDied triggers Game Over
+            if (current <= 0)
+            {
+                onDied?.Invoke();
+                EndScreens endScreens = FindAnyObjectByType<EndScreens>();
+                if (endScreens != null) endScreens.ShowGameOver();
+            }
         }
 
-        if (current <= 0) onDied?.Invoke();
         return true;
     }
 

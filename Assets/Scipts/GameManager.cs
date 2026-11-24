@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Lecture 07's single manager, expanded for Assignment 03's fall zone and HUD.
+// Lecture 07's single manager, expanded for Assignment 03 & Assignment 04's HUD & EndScreens.
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -25,9 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject losePanel;
 
-    //[Header("Restart buttons inside the win and lose panels")]
-    //[SerializeField] Button winRestartButton;
-    //[SerializeField] Button loseRestartButton;
+    LivesText hudLivesText;
+    EndScreens endScreens;
 
     int score;
     bool gameEnded;
@@ -49,25 +48,17 @@ public class GameManager : MonoBehaviour
 
     void OnDestroy()
     {
-        //if (winRestartButton != null)
-        //    winRestartButton.onClick.RemoveListener(RestartLevel);
-        //if (loseRestartButton != null)
-        //    loseRestartButton.onClick.RemoveListener(RestartLevel);
-
         if (Instance == this) Instance = null;
     }
 
     void Start()
     {
+        if (player == null) player = FindAnyObjectByType<Health>();
+        hudLivesText = FindAnyObjectByType<LivesText>();
+        endScreens = FindAnyObjectByType<EndScreens>();
+
         if (winPanel != null) winPanel.SetActive(false);
         if (losePanel != null) losePanel.SetActive(false);
-
-        // Unity UI buttons still respond when Time.timeScale is 0.
-        // Assign BOTH buttons in the GameManager Inspector. No OnClick setup needed.
-        //if (winRestartButton != null)
-        //    winRestartButton.onClick.AddListener(RestartLevel);
-        //if (loseRestartButton != null)
-        //    loseRestartButton.onClick.AddListener(RestartLevel);
 
         UpdateScoreUI();
         UpdateUI();
@@ -77,7 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameEnded || respawning) return;
         score += amount;
-        UpdateScoreUI(); // Only write TMP score when the score changes.
+        UpdateScoreUI();
         if (score >= targetScore) Win();
     }
 
@@ -90,6 +81,12 @@ public class GameManager : MonoBehaviour
     // Called by Health when hearts change and by this manager when lives change.
     public void UpdateUI()
     {
+        if (hudLivesText == null) hudLivesText = FindAnyObjectByType<LivesText>();
+        if (hudLivesText != null)
+        {
+            hudLivesText.Show(Mathf.Max(lives, 0));
+        }
+
         if (livesText != null)
         {
             livesText.text = $"Lives: {Mathf.Max(lives, 0)}";
@@ -113,8 +110,14 @@ public class GameManager : MonoBehaviour
         PlayerController controller = player != null ? player.GetComponent<PlayerController>() : null;
         if (controller != null) controller.StopMovement(respawnDelay);
 
-        if (lives <= 0) Lose();
-        else StartCoroutine(Respawn());
+        if (lives <= 0)
+        {
+            Lose();
+        }
+        else
+        {
+            StartCoroutine(Respawn());
+        }
     }
 
     IEnumerator Respawn()
@@ -139,7 +142,6 @@ public class GameManager : MonoBehaviour
         respawning = false;
     }
 
-    // Optional checkpoint; otherwise respawn at the level's start point.
     public void SetCheckpoint(Transform point)
     {
         if (point != null) respawnPoint = point;
@@ -149,26 +151,45 @@ public class GameManager : MonoBehaviour
     {
         if (gameEnded) return;
         gameEnded = true;
-        if (winPanel != null) winPanel.SetActive(true);
-        Time.timeScale = 0f;
+
+        if (endScreens == null) endScreens = FindAnyObjectByType<EndScreens>();
+        if (endScreens != null)
+        {
+            int level = gameObject.scene.buildIndex;
+            float seconds = Time.timeSinceLevelLoad;
+            bool best = SaveData.Record(level, seconds);
+            SaveData.Unlock(level + 1);
+            endScreens.ShowWin(best, seconds);
+        }
+        else if (winPanel != null)
+        {
+            winPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     void Lose()
     {
         if (gameEnded) return;
         gameEnded = true;
-        if (losePanel != null) losePanel.SetActive(true);
-        Time.timeScale = 0f;
+
+        if (endScreens == null) endScreens = FindAnyObjectByType<EndScreens>();
+        if (endScreens != null)
+        {
+            endScreens.ShowGameOver();
+        }
+        else if (losePanel != null)
+        {
+            losePanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
-    // Used by the Restart button in BOTH the Win and Lose Canvas panels.
     public void RestartLevel()
     {
-        Time.timeScale = 1f; // Always unfreeze BEFORE reloading.
-        Debug.Log("RESTART BUTTON CLICKED!");
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Keep the Lecture 07 method name working for any older Inspector button events.
     public void Restart() => RestartLevel();
 }

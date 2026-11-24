@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] GameObject loadingPanel;
     [SerializeField] Slider progressBar;
     [SerializeField] int lastInPlayOrder = 6;    // the credits
+    [SerializeField] float minDisplayTime = 0.35f; // ensure loading bar reaches 100% and is visibly animated
 
     public void LoadNext()
     {
@@ -31,11 +32,35 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadAsync(int buildIndex)
     {
         if (loadingPanel != null) loadingPanel.SetActive(true);
+        if (progressBar != null) progressBar.value = 0f;
+
         AsyncOperation op = SceneManager.LoadSceneAsync(buildIndex);
-        while (!op.isDone)
+        op.allowSceneActivation = false;
+
+        float timer = 0f;
+        while (op.progress < 0.9f || timer < minDisplayTime)
         {
-            if (progressBar != null) progressBar.value = Mathf.Clamp01(op.progress / 0.9f);
+            timer += Time.unscaledDeltaTime;
+            // The assignment's formula: op.progress / 0.9f
+            float targetProgress = Mathf.Clamp01(op.progress / 0.9f);
+            if (progressBar != null)
+            {
+                progressBar.value = Mathf.MoveTowards(progressBar.value, targetProgress, 3f * Time.unscaledDeltaTime);
+            }
             yield return null;
         }
+
+        // Fill bar to 100% as required by assignment ("a bar that reaches 100%")
+        if (progressBar != null)
+        {
+            while (progressBar.value < 1f)
+            {
+                progressBar.value = Mathf.MoveTowards(progressBar.value, 1f, 4f * Time.unscaledDeltaTime);
+                yield return null;
+            }
+        }
+
+        yield return new WaitForSecondsRealtime(0.08f);
+        op.allowSceneActivation = true;
     }
 }
