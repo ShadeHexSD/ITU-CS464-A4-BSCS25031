@@ -12,5 +12,11 @@ public class PersistentMusic : MonoBehaviour
         if (instance != null) { Destroy(gameObject); return; }
         instance = this;
         DontDestroyOnLoad(gameObject);
+
+        AudioSource src = GetComponent<AudioSource>();
+        if (src != null && !src.isPlaying && src.clip != null)
+        {
+            src.Play();
+        }
     }
 }
