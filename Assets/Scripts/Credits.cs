@@ -3,7 +3,6 @@
 // assigned to menuButton so this script wires it at runtime. autoAdvanceSeconds = 0
 // means "wait for the button".
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
@@ -35,6 +34,6 @@ public class Credits : MonoBehaviour
         if (returning) return;
         returning = true;
         if (loader != null) loader.LoadMenu();
-        else SceneManager.LoadScene(0);
+        else Debug.LogError("[A04] No LevelLoader found in Credits; cannot return to menu.", this);
     }
 }

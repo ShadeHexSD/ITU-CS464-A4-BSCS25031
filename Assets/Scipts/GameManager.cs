@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 // Lecture 07's single manager, expanded for Assignment 03 & Assignment 04's HUD & EndScreens.
@@ -27,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     LivesText hudLivesText;
     EndScreens endScreens;
+    LevelLoader loader;
 
     int score;
     bool gameEnded;
@@ -195,7 +195,9 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (loader == null) loader = FindAnyObjectByType<LevelLoader>();
+        if (loader != null) loader.Reload();
+        else Debug.LogError("[A04] No LevelLoader found; restart did not load a scene.", this);
     }
 
     public void Restart() => RestartLevel();

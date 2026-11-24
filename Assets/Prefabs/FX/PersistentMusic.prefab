@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1941870896851309279}
   - component: {fileID: 6866229958344367288}
   - component: {fileID: 2375588207895780616}
+  - component: {fileID: 6208157001819238173}
   m_Layer: 0
   m_Name: PersistentMusic
   m_TagString: Untagged
@@ -142,3 +143,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6208157001819238173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110211423248691460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b8862d119402345a7187e7a4cba94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MixerApply
+  mixer: {fileID: 24100000, guid: d183c2332e9b7fc4cbe33dafddf5469c, type: 2}
+  parameters:
+  - MusicVolume
+  - SfxVolume

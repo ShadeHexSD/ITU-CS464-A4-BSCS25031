@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager_03 : MonoBehaviour
 {
@@ -22,6 +21,7 @@ public class GameManager_03 : MonoBehaviour
 
     LivesText hudLivesText;
     EndScreens endScreens;
+    LevelLoader loader;
     bool reachedExit = false;
 
     int score;
@@ -198,7 +198,9 @@ public class GameManager_03 : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (loader == null) loader = FindAnyObjectByType<LevelLoader>();
+        if (loader != null) loader.Reload();
+        else Debug.LogError("[A04] No LevelLoader found; restart did not load a scene.", this);
     }
 
     void OnDestroy()
