@@ -1,6 +1,6 @@
 # CS464 Assignment 04 · Tayyab Ahmed Minhas · BSCS25031
 
-**Video (90–180 s):** [YouTube (unlisted) or Google Drive link]
+**Video (90–180 s):** (https://drive.google.com/file/d/1GJd9u9SPhI5t06lS0FdDXfklDtfL3sHJ/view?usp=drive_link)
 
 <p>
 <img src="Docs/hud-16x9.png" width="320" alt="The HUD at 16:9">
