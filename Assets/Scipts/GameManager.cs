@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviour
     bool gameEnded;
     bool respawning;
 
-    public bool CanCollect => !gameEnded && !respawning;
+    // Dying must not invalidate coins already touched: only a finished game blocks collection.
+    public bool CanCollect => !gameEnded;
+    public int TargetScore => targetScore;
 
     void Awake()
     {
@@ -60,13 +62,18 @@ public class GameManager : MonoBehaviour
         if (winPanel != null) winPanel.SetActive(false);
         if (losePanel != null) losePanel.SetActive(false);
 
+        // The serialized value is only a fallback. Each blockout has a different number of
+        // coins, so the real target is whatever this scene contains.
+        int detected = LevelScoreGoal.TotalInActiveScene();
+        if (detected > 0) targetScore = detected;
+
         UpdateScoreUI();
         UpdateUI();
     }
 
     public void AddScore(int amount)
     {
-        if (gameEnded || respawning) return;
+        if (gameEnded || amount <= 0) return;
         score += amount;
         UpdateScoreUI();
         if (score >= targetScore) Win();

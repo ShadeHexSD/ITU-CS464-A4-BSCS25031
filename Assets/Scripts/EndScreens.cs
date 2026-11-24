@@ -3,7 +3,6 @@
 // Wire Health.onDied -> EndScreens.ShowGameOver in the Inspector. Both panels start inactive.
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class EndScreens : MonoBehaviour
 {
@@ -18,16 +17,21 @@ public class EndScreens : MonoBehaviour
     [SerializeField] AudioClip loseClip;
     [SerializeField] LevelLoader loader;
 
-    void Awake() => Over = false;                   // a static survives a load
+    void Awake()
+    {
+        Over = false;                               // a static survives a load
+        UiEventSystem.Ensure();                     // levels 1/2 had no EventSystem
+    }
 
     public void ShowWin(bool newBest, float seconds)
     {
         if (Over) return;
         Over = true;
         Time.timeScale = 0f;
-        winTimeText.SetText(newBest ? "New best: {0:1} s" : "{0:1} s", seconds);
-        winPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(winFirstButton);
+        if (winTimeText != null)
+            winTimeText.SetText(newBest ? "New best: {0:1} s" : "{0:1} s", seconds);
+        if (winPanel != null) winPanel.SetActive(true);
+        UiEventSystem.Select(winFirstButton);
         if (SfxPlayer.Instance != null) SfxPlayer.Instance.Play(winClip);
     }
 
@@ -36,13 +40,13 @@ public class EndScreens : MonoBehaviour
         if (Over) return;
         Over = true;
         Time.timeScale = 0f;
-        overPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(overFirstButton);
+        if (overPanel != null) overPanel.SetActive(true);
+        UiEventSystem.Select(overFirstButton);
         if (SfxPlayer.Instance != null) SfxPlayer.Instance.Play(loseClip);
     }
 
     // Buttons: Next level, Restart and Main menu call these (or the loader directly).
-    public void NextLevel() => loader.LoadNext();
-    public void Restart() => loader.Reload();
-    public void MainMenu() => loader.LoadMenu();
+    public void NextLevel() { if (loader != null) loader.LoadNext(); }
+    public void Restart() { if (loader != null) loader.Reload(); }
+    public void MainMenu() { if (loader != null) loader.LoadMenu(); }
 }

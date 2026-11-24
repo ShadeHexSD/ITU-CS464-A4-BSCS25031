@@ -2,14 +2,10 @@
 // arrow keys and Enter work at once. (The EventSystem's First Selected only covers a menu that is
 // there when the scene starts.)
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class SelectOnEnable : MonoBehaviour
 {
     [SerializeField] GameObject firstButton;
 
-    void OnEnable()
-    {
-        if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(firstButton);
-    }
+    void OnEnable() => UiEventSystem.Select(firstButton);
 }

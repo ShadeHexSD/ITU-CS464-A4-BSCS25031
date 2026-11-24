@@ -9,6 +9,8 @@ public class Coin : MonoBehaviour
 
     bool collected;
 
+    public int Value => value;
+
     void Update()
     {
         transform.Rotate(0f, spinSpeed * Time.deltaTime, 0f);
@@ -18,6 +20,11 @@ public class Coin : MonoBehaviour
     {
         if (collected || !other.CompareTag("Player"))
             return;
+
+        // Once the level is over the HUD/score should not change any more. Respawning is
+        // deliberately NOT a blocker: a coin touched during the death animation still counts.
+        if (GameManager.Instance != null && !GameManager.Instance.CanCollect) return;
+        if (GameManager_03.Instance != null && !GameManager_03.Instance.CanCollect) return;
 
         collected = true;
 

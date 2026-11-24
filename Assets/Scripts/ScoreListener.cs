@@ -10,6 +10,11 @@ public class ScoreListener : MonoBehaviour
 
     void OnEnable()
     {
+        // The HUD prefab is shared by every level, so its serialized target of 10 is wrong
+        // for levels with 6/7 coins. Read the real total for this scene before showing it.
+        int detected = LevelScoreGoal.TotalInActiveScene();
+        if (detected > 0) target = detected;
+
         GameEvents.CoinCollected += OnCoin;
         scoreText.Show(score, target);
     }

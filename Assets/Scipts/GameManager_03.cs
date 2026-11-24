@@ -28,6 +28,9 @@ public class GameManager_03 : MonoBehaviour
     bool finished;
     bool respawning;
 
+    public bool CanCollect => !finished;
+    public int TargetScore => targetScore;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -55,6 +58,9 @@ public class GameManager_03 : MonoBehaviour
 
         if (player == null || respawnPoint == null)
             Debug.LogError("Assign Player and Respawn Point on GameManager.", this);
+
+        int detected = LevelScoreGoal.TotalInActiveScene();
+        if (detected > 0) targetScore = detected;
 
         UpdateUI();
     }

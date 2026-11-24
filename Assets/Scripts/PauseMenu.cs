@@ -2,7 +2,6 @@
 // Resume() comes before EVERY load: Time.timeScale, AudioListener.pause and the static IsPaused all survive a load.
 // Put it on the HUD. The player's Update must start with:  if (PauseMenu.IsPaused || EndScreens.Over) return;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,7 +10,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] LevelLoader loader;
     public static bool IsPaused { get; private set; }
 
-    void Awake() => IsPaused = false;            // a static survives a load: start every scene unpaused
+    void Awake()
+    {
+        IsPaused = false;                        // a static survives a load: start every scene unpaused
+        UiEventSystem.Ensure();                  // levels 1/2 had no EventSystem
+    }
 
     void Update()
     {
@@ -29,7 +32,7 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
         AudioListener.pause = true;
-        EventSystem.current.SetSelectedGameObject(firstButton);
+        UiEventSystem.Select(firstButton);
     }
 
     public void Resume()
@@ -43,12 +46,12 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         Resume();
-        loader.Reload();
+        if (loader != null) loader.Reload();
     }
 
     public void QuitToMenu()
     {
         Resume();
-        loader.LoadMenu();
+        if (loader != null) loader.LoadMenu();
     }
 }

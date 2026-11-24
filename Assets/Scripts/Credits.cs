@@ -3,7 +3,6 @@
 // assigned to menuButton so this script wires it at runtime. autoAdvanceSeconds = 0
 // means "wait for the button".
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,9 +17,11 @@ public class Credits : MonoBehaviour
     void Start()
     {
         if (loader == null) loader = FindAnyObjectByType<LevelLoader>();
-        if (menuButton != null) menuButton.onClick.AddListener(ReturnToMenu);
-        if (EventSystem.current != null && menuButton != null)
-            EventSystem.current.SetSelectedGameObject(menuButton.gameObject);
+        if (menuButton != null)
+        {
+            menuButton.onClick.AddListener(ReturnToMenu);
+            UiEventSystem.Select(menuButton.gameObject);
+        }
     }
 
     void Update()

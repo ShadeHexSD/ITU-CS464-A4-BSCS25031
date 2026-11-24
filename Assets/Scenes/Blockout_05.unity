@@ -151,10 +151,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blockout_05
       objectReference: {fileID: 0}
+    - target: {fileID: 1844049210543730980, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844049210543730980, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2092974632807215015, guid: 07690ab878c52784caf1756863307d48, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 971206e134e24024c944975c4b079cd3, type: 2}
+    - target: {fileID: 2392514244969247724, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294439147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392514244969247724, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 2598595788196728325, guid: 07690ab878c52784caf1756863307d48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.56
@@ -292,6 +308,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 971206e134e24024c944975c4b079cd3, type: 2}
     - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: winPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: livesText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489013406576288651, guid: 07690ab878c52784caf1756863307d48, type: 3}
       propertyPath: winRestartButton
       value: 
       objectReference: {fileID: 0}
@@ -304,6 +336,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4640531601331107765, guid: 07690ab878c52784caf1756863307d48, type: 3}
     - {fileID: 6214064098390383566, guid: 07690ab878c52784caf1756863307d48, type: 3}
+    - {fileID: 2677880706054521048, guid: 07690ab878c52784caf1756863307d48, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 760956540710975910, guid: 07690ab878c52784caf1756863307d48, type: 3}
