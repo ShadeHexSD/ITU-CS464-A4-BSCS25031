@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +16,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Lecture 08 requirement: Guard the player when paused or during game over
+        if (PauseMenu.IsPaused || EndScreens.Over)
+        {
+            move = Vector3.zero;
+            return;
+        }
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         move = new Vector3(h, 0f, v);
@@ -24,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (PauseMenu.IsPaused || EndScreens.Over)
+        {
+            rb.linearVelocity = Vector3.zero;
+            return;
+        }
 
         Vector3 direction = Vector3.ClampMagnitude(move, 1f)
             * speed * speedMultiplier;
@@ -50,7 +61,6 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         noControlUntil = Time.time + seconds;
     }
-
 
     public void BoostSpeed(float multiplier, float seconds)
     {

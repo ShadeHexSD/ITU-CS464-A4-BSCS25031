@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager_03 : MonoBehaviour
 {
@@ -20,11 +19,17 @@ public class GameManager_03 : MonoBehaviour
     [SerializeField] Transform mazeEnd;
     [SerializeField] float winDistance = 1.5f;
 
+    LivesText hudLivesText;
+    EndScreens endScreens;
+    LevelLoader loader;
     bool reachedExit = false;
 
     int score;
     bool finished;
     bool respawning;
+
+    public bool CanCollect => !finished;
+    public int TargetScore => targetScore;
 
     void Awake()
     {
@@ -42,6 +47,9 @@ public class GameManager_03 : MonoBehaviour
         if (player == null)
             player = FindAnyObjectByType<Health>();
 
+        hudLivesText = FindAnyObjectByType<LivesText>();
+        endScreens = FindAnyObjectByType<EndScreens>();
+
         if (winPanel != null)
             winPanel.SetActive(false);
 
@@ -50,6 +58,9 @@ public class GameManager_03 : MonoBehaviour
 
         if (player == null || respawnPoint == null)
             Debug.LogError("Assign Player and Respawn Point on GameManager.", this);
+
+        int detected = LevelScoreGoal.TotalInActiveScene();
+        if (detected > 0) targetScore = detected;
 
         UpdateUI();
     }
@@ -62,11 +73,10 @@ public class GameManager_03 : MonoBehaviour
         Vector3 playerPosition = player.transform.position;
         Vector3 endPosition = mazeEnd.position;
 
-
         playerPosition.y = 0;
         endPosition.y = 0;
 
-        if(Vector3.Distance(endPosition, playerPosition) < winDistance)
+        if (Vector3.Distance(endPosition, playerPosition) < winDistance)
         {
             reachedExit = true;
             Win();
@@ -80,11 +90,16 @@ public class GameManager_03 : MonoBehaviour
 
         score += amount;
         UpdateUI();
-
     }
 
     public void UpdateUI()
     {
+        if (hudLivesText == null) hudLivesText = FindAnyObjectByType<LivesText>();
+        if (hudLivesText != null)
+        {
+            hudLivesText.Show(Mathf.Max(lives, 0));
+        }
+
         if (scoreText != null)
             scoreText.text = $"Score: {score} / {targetScore}";
 
@@ -126,11 +141,7 @@ public class GameManager_03 : MonoBehaviour
         if (body != null)
         {
             body.position = respawnPoint.position;
-#if UNITY_6000_0_OR_NEWER
             body.linearVelocity = Vector3.zero;
-#else
-            body.velocity = Vector3.zero;
-#endif
             body.angularVelocity = Vector3.zero;
         }
         else
@@ -148,9 +159,21 @@ public class GameManager_03 : MonoBehaviour
             return;
 
         finished = true;
-        if (winPanel != null)
+
+        if (endScreens == null) endScreens = FindAnyObjectByType<EndScreens>();
+        if (endScreens != null)
+        {
+            int level = gameObject.scene.buildIndex;
+            float seconds = Time.timeSinceLevelLoad;
+            bool best = SaveData.Record(level, seconds);
+            SaveData.Unlock(level + 1);
+            endScreens.ShowWin(best, seconds);
+        }
+        else if (winPanel != null)
+        {
             winPanel.SetActive(true);
-        Time.timeScale = 0f;
+            Time.timeScale = 0f;
+        }
     }
 
     void Lose()
@@ -159,15 +182,25 @@ public class GameManager_03 : MonoBehaviour
             return;
 
         finished = true;
-        if (losePanel != null)
+
+        if (endScreens == null) endScreens = FindAnyObjectByType<EndScreens>();
+        if (endScreens != null)
+        {
+            endScreens.ShowGameOver();
+        }
+        else if (losePanel != null)
+        {
             losePanel.SetActive(true);
-        Time.timeScale = 0f;
+            Time.timeScale = 0f;
+        }
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (loader == null) loader = FindAnyObjectByType<LevelLoader>();
+        if (loader != null) loader.Reload();
+        else Debug.LogError("[A04] No LevelLoader found; restart did not load a scene.", this);
     }
 
     void OnDestroy()

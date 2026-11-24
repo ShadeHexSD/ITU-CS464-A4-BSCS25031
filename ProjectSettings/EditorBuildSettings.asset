@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8b86eacc8137a68488c716f5357ce613
+  - enabled: 1
+    path: Assets/Scenes/Blockout_01.unity
+    guid: cb2ea6f1b5e66d045af752379369f99f
+  - enabled: 1
     path: Assets/Scenes/Blockout_02.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Blockout_03.unity
+    guid: 2cccfa16a1577594cb057c7e200e501c
+  - enabled: 1
+    path: Assets/Scenes/Blockout_04.unity
+    guid: a8ee77c69517918458bc4d0ac547b822
+  - enabled: 1
+    path: Assets/Scenes/Blockout_05.unity
+    guid: f3c9576a6b6c04d40a4ab213db49d0bf
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9496a8c18e2d4e646ad8c6b631e14737
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

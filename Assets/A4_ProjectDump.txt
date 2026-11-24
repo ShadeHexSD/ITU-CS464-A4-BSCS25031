@@ -1,0 +1,1966 @@
+﻿=== UNITY ===
+6000.3.24f1
+activeInputHandler: 2  (0 = old Input Manager, 1 = new Input System only, 2 = both)
+
+=== BUILD SETTINGS SCENE LIST ===
+0  on   Assets/Scenes/MainMenu.unity
+1  on   Assets/Scenes/Blockout_01.unity
+2  on   Assets/Scenes/Blockout_02.unity
+3  on   Assets/Scenes/Blockout_03.unity
+4  on   Assets/Scenes/Blockout_04.unity
+5  on   Assets/Scenes/Blockout_05.unity
+6  on   Assets/Scenes/Credits.unity
+
+=== TAGS ===
+Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController
+
+=== MIXERS ===
+
+=== PREFABS (Assets/Prefabs) ===
+Assets/Prefabs/Blockout_01.prefab
+Assets/Prefabs/Blockout_1.prefab
+Assets/Prefabs/Blockout_2 1.prefab
+Assets/Prefabs/Blockout_02.prefab
+Assets/Prefabs/Blockout_03.prefab
+Assets/Prefabs/Blockout_05.prefab
+Assets/Prefabs/Canvas.prefab
+Assets/Prefabs/Coin.prefab
+Assets/Prefabs/CoinSpawner.prefab
+Assets/Prefabs/Crusher.prefab
+Assets/Prefabs/Enemy.prefab
+Assets/Prefabs/Everything.prefab
+Assets/Prefabs/GameManager.prefab
+Assets/Prefabs/Main Camera.prefab
+Assets/Prefabs/Obstacle.prefab
+Assets/Prefabs/Platform_01.prefab
+Assets/Prefabs/Player.prefab
+Assets/Prefabs/PowerUps.prefab
+Assets/Prefabs/WayPoints.prefab
+
+=== AUDIO CLIPS ===
+Assets/Audio/Clips/back_001.ogg
+Assets/Audio/Clips/click.ogg
+Assets/Audio/Clips/close_001.ogg
+Assets/Audio/Clips/error_008.ogg
+Assets/Audio/Clips/hit.ogg
+Assets/Audio/Clips/hover.ogg
+Assets/Audio/Clips/hum1.ogg
+Assets/Audio/Clips/hum2.ogg
+Assets/Audio/Clips/lose.ogg
+Assets/Audio/Clips/maximize_001.ogg
+Assets/Audio/Clips/music.ogg
+Assets/Audio/Clips/open_001.ogg
+Assets/Audio/Clips/pickup.ogg
+Assets/Audio/Clips/pluck_002.ogg
+Assets/Audio/Clips/win.ogg
+
+=== SCENES ===
+
+--- SCENE: Assets/_Recovery/0.unity   (name: 0)
+AudioListeners in scene: 2
+- Main Camera [tag MainCamera]  <prefab: Main Camera>  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- Blockout_01  <prefab: Blockout_01>  : 
+  - Main Camera [tag MainCamera]  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, CameraFollow, 
+  - Enemy_01  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, Hazard, 
+  - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, Health, 
+    (+2 plain mesh/collider objects)
+  - Enemy_02  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, Hazard, 
+  - CoinSpawner  : Spawner, 
+  - GameManager  : GameManager, 
+  - Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  - EventSystem  : EventSystem, InputSystemUIInputModule, 
+  - Obstacles  : 
+    - Obstacle  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (1)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (2)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+  - PowerUps  : 
+    - PowerUp  : MeshFilter, MeshRenderer, BoxCollider(trigger), PowerUp, 
+  - Crusher  : 
+    - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+    (+4 plain mesh/collider objects)
+  - GameObject  : BoxCollider(trigger), FallZone, 
+  - LaunchPad  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+  (+2 plain mesh/collider objects)
+
+--- SCENE: Assets/Scenes/Blockout_01.unity   (name: Blockout_01)
+AudioListeners in scene: 2
+- Main Camera [tag MainCamera]  <prefab: Main Camera>  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- Blockout_01  <prefab: Blockout_01>  : 
+  - Main Camera [tag MainCamera]  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, CameraFollow, 
+  - Enemy_01  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, Hazard, 
+  - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, Health, 
+    (+2 plain mesh/collider objects)
+  - Enemy_02  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, Hazard, 
+  - CoinSpawner  : Spawner, 
+  - GameManager  : GameManager, 
+  - Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  - EventSystem  : EventSystem, InputSystemUIInputModule, 
+  - Obstacles  : 
+    - Obstacle  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (1)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (2)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+  - PowerUps  : 
+    - PowerUp  : MeshFilter, MeshRenderer, BoxCollider(trigger), PowerUp, 
+  - Crusher  : 
+    - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+    (+4 plain mesh/collider objects)
+  - GameObject  : BoxCollider(trigger), FallZone, 
+  - LaunchPad  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+  (+2 plain mesh/collider objects)
+
+--- SCENE: Assets/Scenes/Blockout_02.unity   (name: Blockout_02)
+AudioListeners in scene: 1
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- Global Volume  : Volume, 
+- Blockout_02  <prefab: Blockout_02>  : 
+  - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, 
+    (+2 plain mesh/collider objects)
+  - Crusher  : 
+    - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+    (+4 plain mesh/collider objects)
+  - Crusher (1)  : 
+    - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+    (+4 plain mesh/collider objects)
+  - Enemies  : 
+    - Enemy  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+  - Obstacles  : 
+    - Obstacle  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (3)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (4)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (5)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (1)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (2)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+  - GameManagere  : GameManager, 
+  - CoinSpawner  : Spawner, 
+  - Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  - Main Camera [tag MainCamera]  <prefab: Main Camera>  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+  - Cube  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+  - GameObject  : BoxCollider(trigger), FallZone, 
+  - Coin  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (1)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (2)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (5)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (6)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (7)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (8)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (3)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (4)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  (+2 plain mesh/collider objects)
+
+--- SCENE: Assets/Scenes/Blockout_03.unity   (name: Blockout_03)
+AudioListeners in scene: 1
+- Blockout_03  <prefab: Blockout_03>  : 
+  - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, 
+    (+2 plain mesh/collider objects)
+  - Obstacles&Enemies  : 
+    - Crusher  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Crusher (1)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Crusher (2)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Crusher (3)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Crusher (4)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Enemy  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Enemy (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Obstacle  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (1)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (2)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (3)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (4)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+    - Obstacle (5)  : 
+      - Cylinder  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), 
+      - Cylinder (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (4)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (5)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (6)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (7)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (8)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (9)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (10)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      - Cylinder (11)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Hazard, 
+      (+1 plain mesh/collider objects)
+  - Main Camera [tag MainCamera]  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+  - GameManager  : GameManager, 
+  - PowerUps  : 
+    - PowerUp  : MeshFilter, MeshRenderer, BoxCollider(trigger), PowerUp, 
+  - BouncePad  : 
+    - Cube  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+    - Cube (1)  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+  - Coin  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (1)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (2)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (3)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (8)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (9)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (4)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (5)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (6)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Coin (7)  <prefab: Coin>  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Canvas  <prefab: Canvas>  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  (+23 plain mesh/collider objects)
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- GameObject  : BoxCollider(trigger), FallZone, 
+- EventSystem  : EventSystem, InputSystemUIInputModule, 
+
+--- SCENE: Assets/Scenes/Blockout_04.unity   (name: Blockout_04)
+AudioListeners in scene: 1
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- Everything  <prefab: Everything>  : 
+  - Locations  : 
+    - GameManager  : GameManager, 
+    - Enemies  : 
+      - Enemy  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+      - Enemy (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+      - Enemy (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+      - Enemy (3)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+    - Coin  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (1)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (2)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (3)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (4)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (5)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, 
+      (+2 plain mesh/collider objects)
+    (+14 plain mesh/collider objects)
+  - Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  (+2 plain mesh/collider objects)
+- Main Camera [tag MainCamera]  <prefab: Main Camera>  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+- BouncePad  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+- GameObject  : BoxCollider(trigger), 
+- EventSystem  : EventSystem, InputSystemUIInputModule, 
+
+--- SCENE: Assets/Scenes/Blockout_05.unity   (name: Blockout_05)
+AudioListeners in scene: 1
+- Directional Light  : Light, UniversalAdditionalLightData, 
+- Blockout_05  <prefab: Blockout_05>  : 
+  - Player [tag Player]  : Rigidbody, CapsuleCollider, PlayerController, Health, 
+    (+2 plain mesh/collider objects)
+  - Coins  : 
+    - Coin  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (1)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (2)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (3)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (4)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (5)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+    - Coin (6)  : MeshFilter, MeshRenderer, SphereCollider(trigger), Coin, 
+  - Crushers  : 
+    - Crusher  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      (+4 plain mesh/collider objects)
+    - Crusher (1)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      - Warning  : MeshFilter, MeshRenderer, BoxCollider(trigger), 
+      (+3 plain mesh/collider objects)
+    - Crusher (2)  : 
+      - MainCrusher  : MeshFilter, MeshRenderer, BoxCollider(trigger), Hazard, 
+      - Warning  : MeshFilter, MeshRenderer, BoxCollider(trigger), 
+      (+3 plain mesh/collider objects)
+  - Powerups  : 
+    - PowerUps  : 
+      - PowerUp  : MeshFilter, MeshRenderer, BoxCollider(trigger), PowerUp, 
+    - PowerUps (1)  : 
+      - PowerUp  : MeshFilter, MeshRenderer, BoxCollider(trigger), PowerUp, 
+      (+1 plain mesh/collider objects)
+  - Enemy  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+  - Enemy (1)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+  - Enemy (2)  : MeshFilter, MeshRenderer, CapsuleCollider(trigger), Rigidbody, EnemyPatrol, Hazard, 
+  - GameManager  : GameManager, 
+  - Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+    - ScoreText  : CanvasRenderer, TextMeshProUGUI("Score: "), 
+    - WinPanel  : CanvasRenderer, Image, 
+      - WinText  : CanvasRenderer, TextMeshProUGUI("You Won!"), 
+        - Restart (1)  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LosePanel  : CanvasRenderer, Image, 
+      - LostTextx  : CanvasRenderer, TextMeshProUGUI("You Lost!
+"), 
+        - Restart  : CanvasRenderer, Image, Button, 
+          - Text (TMP)  : CanvasRenderer, TextMeshProUGUI("Restart
+"), 
+    - LivesText  : CanvasRenderer, TextMeshProUGUI("Lives: "), 
+  - Main Camera (1) [tag MainCamera]  : Camera, AudioListener, UniversalAdditionalCameraData, CameraFollow, 
+  (+3 plain mesh/collider objects)
+- Cube  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+- Cube (1)  : MeshFilter, MeshRenderer, BoxCollider(trigger), BouncePad, 
+- GameObject  : BoxCollider(trigger), 
+- EventSystem  : EventSystem, InputSystemUIInputModule, 
+
+--- SCENE: Assets/Scenes/Credits.unity   (name: Credits)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, UniversalAdditionalCameraData, 
+- Directional Light  : Light, UniversalAdditionalLightData, 
+
+--- SCENE: Assets/Scenes/MainMenu.unity   (name: MainMenu)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Directional Light  : Light, UniversalAdditionalLightData, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/01-  Single Line TextMesh Pro.unity   (name: 01-  Single Line TextMesh Pro)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Simple Example  : MeshRenderer, TextMeshPro("Simple <color=yellow>example</color> of text created with <#80ff80>TextMesh <#8080ff>Pro</color>!"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/02 - Multi-line TextMesh Pro.unity   (name: 02 - Multi-line TextMesh Pro)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Multi Line TextMesh Pro  : MeshRenderer, TextMeshPro("Example of <#ff8000>multiple</color>
+<#00ff00>lines</color> of text created
+with <#80ff80>TextMesh <#8080ff>Pro</color>!"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/03 - Line Justification.unity   (name: 03 - Line Justification)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- 1 - Left Justified  : MeshRenderer, TextMeshPro("This block of text is
+<#8080ff>Left</color> justified."), MeshFilter, 
+- 3 - Right Justified  : MeshRenderer, TextMeshPro("This block of text is
+<#80ff80>Right</color> justified."), MeshFilter, 
+- 2 - Center Justified  : MeshRenderer, TextMeshPro("This block of text is
+<#ff8000>Center</color> justified."), MeshFilter, 
+- 4 - Justified  : MeshRenderer, TextMeshPro("This block of text is <#f0af80>Justified</color> on the left and right side."), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/04 - Word Wrapping.unity   (name: 04 - Word Wrapping)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Word Wrapping  : MeshRenderer, TextMeshPro("This is an example showing how TextMesh Pro! can handle <#ffff00>word wrapping</color>."), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/05 - Style Tags.unity   (name: 05 - Style Tags)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro - Styles  : CanvasRenderer, TextMeshProUGUI("<size=120%><u><#a0ffa0>Basic Style Tags</color>* available in TextMesh<#0080ff>Pro</color></u></size><line-height=1.5em>
+</line-height>Normal
+<b>Bold</b><pos=50%><<#ffff00>b</color>> <<#ffff00>/b</color>>
+<i>Italics</i><pos=50%><<#ffff00>i</color>> <<#ffff00>/i</color>>
+<u>Underline</u><pos=50%><<#ffff00>u</color>> <<#ffff00>/u</color>>
+<s>Strikethrough</s><pos=50%><<#ffff00>s</color>> <<#ffff00>/s</color>>
+Superscript  - X<sup>3</sup> -<pos=50%><<#ffff00>sup</color>> <<#ffff00>/sup</color>>
+Subscript  - H<sub>2</sub>O -<pos=50%><<#ffff00>sub</color>> <<#ffff00>/sub</color>>
+Text <mark=#ffff0040>Highlighting</mark><pos=50%><<#ffff00>mark=#ffff8000</color>> <<#ffff00>/mark</color>>
+"), 
+  - TextMeshPro - Caption  : CanvasRenderer, TextMeshProUGUI("*Partial list of the Rich Text Tags available in TextMeshPro."), 
+- TextMesh Pro - Styles (inactive)  : MeshFilter, TextMeshPro("<size=120%><u><#a0ffa0>Basic Style Tags</color>* available in TextMesh<#0080ff>Pro</color></u></size><line-height=1.5em>
+</line-height>Normal
+<b>Bold</b><pos=50%><<#ffff00>b</color>> <<#ffff00>/b</color>>
+<i>Italics</i><pos=50%><<#ffff00>i</color>> <<#ffff00>/i</color>>
+<u>Underline</u><pos=50%><<#ffff00>u</color>> <<#ffff00>/u</color>>
+<s>Strikethrough</s><pos=50%><<#ffff00>s</color>> <<#ffff00>/s</color>>
+Superscript  - X<sup>3</sup> -<pos=50%><<#ffff00>sup</color>> <<#ffff00>/sup</color>>
+Subscript  - H<sub>2</sub>O -<pos=50%><<#ffff00>sub</color>> <<#ffff00>/sub</color>>
+Text <mark=#ffff0040>Highlighting</mark><pos=50%><<#ffff00>mark=#ffff8000</color>> <<#ffff00>/mark</color>>
+"), CanvasRenderer, MeshRenderer, 
+- TextMesh Pro - Caption (inactive)  : MeshFilter, TextMeshPro("*This is a partial list of all the Rich Text Tags available."), CanvasRenderer, MeshRenderer, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/06 - Extra Rich Text Examples.unity   (name: 06 - Extra Rich Text Examples)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<size=120%><u>Additional <#a0ffa0>Rich Text Tags</color> in TextMesh<#0080ff>Pro!</color></u></size><line-height=1.5em>
+</line-height><allcaps>all caps</allcaps><pos=50%><<#ffff00>allcaps</color>> <<#ffff00>/allcaps</color>>
+E<smallcaps>xample of small caps.</smallcaps><pos=50%><<#ffff00>smallcaps</color>> <<#ffff00>/smallcaps</color>>
+<cspace=0.3em>Character spacing</cspace><pos=50%><<#ffff00>cspace=0.3em</color>> <<#ffff00>/cspace</color>>
+<mspace=1em>Monospaced</mspace><pos=50%><<#ffff00>mspace=1em</color>> <<#ffff00>/mspace</color>>
+<line-height=75>Line height<pos=50%><<#ffff00>line-height=75</color>> <<#ffff00>/line-height</color>>
+</line-height>No Line-Break<pos=50%><<#ffff00>nobr</color>> <<#ffff00>/nobr</color>>
+Size <size=75%>Smaller / <size=1.5em>Bigger</size><pos=50%><<#ffff00>size=75%</color>> <<#ffff00>size=1.5em</color>> <<#ffff00>/size</color>>"), 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("The larger title line is done using the <<#a0ffa0>size=120%</color>> tag. Alignment of the tag examples is done using the <<#a0ffa0>pos=xx.x</color>> tag."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/07 - Superscript & Subscript Example.unity   (name: 07 - Superscript & Subscript Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- TextMesh Pro - Styles  : MeshRenderer, TextMeshPro("<u>9x<sup><#00ff00>3</color></sup></u> + <u>4x</u><sup><#00ff00>2</color></sup> + <u>2x + 4 = 0</u>
+<#ffff00><u><i><#ff8000><b>Propane</b></i></u></color> = <u>C<sub><#ffff00>3</color></sub>H<sub><#ffff00>8</color></sub></u>"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/08 - Improved Text Alignment.unity   (name: 08 - Improved Text Alignment)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<align=center><style=H1><#ffffff><u>Multiple<#80f0ff> Alignment</color> per text object</u></color></style></align><line-height=2em>
+</line-height>The <<#ffffa0>align</color>> tag in TextMesh<#40a0ff>Pro</color> provides the ability to control the alignment of lines and paragraphs which is essential when working with text. 
+
+<align=left>You may want some block of text to be <#80f0ff>left aligned</color> <<#ffffa0>align=<#80f0ff>left</color></color>> which is sort of the standard.</align>
+
+<style=Quote><#ffffa0>"Using <#80f0ff>Center Alignment</color> <<#ffffa0>align=<#80f0ff>center</color></color>> for a title or displaying a quote is another good example of text alignment."</color></style>
+
+<align=right><#80f0ff>Right Alignment</color> <<#ffffa0>align=<#80f0ff>right</color></color>> can be useful to create contrast between lines and paragraphs of text.
+
+<align=justified><#80f0ff>Justified Alignment</color> <<#ffffa0>align=<#80f0ff>justified</color></color>> results in text that is flush on both the left and right margins. Used well, justified type can look clean and classy.
+
+<style=Quote><align=left><#ffffa0>"Text formatting and alignment has a huge impact on how people will read and perceive your text."</color>
+<size=65%><align=right>- Stephan Bouchard</style>"), TMP_TextInfoDebugTool, 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/09 - Margin Tag Example.unity   (name: 09 - Margin Tag Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceCamera), GraphicRaycaster, 
+  - Frame  : VerticalLayoutGroup, 
+    - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<line-height=1.5em><size=125%><u><align=center><#80ff80>The <smallcaps></color>TextMesh<#40A0FF>Pro</color><#80ff80></smallcaps> Margin Tag</color></u></size></align>
+</line-height><margin=5%>Example of using the <<#FFFF00>margin=5%</color>> tag which defines the left and right margin of a line or paragraph of text.</margin>
+
+<margin left=15%>You can also use the <<#FFFF00>margin left=15%</color>> tag to independently control the left margin.</margin>
+
+<margin right=15%>Or use the <<#FFFF00>margin right=15%</color>> tag to control the right margin.</margin>"), 
+    - TextMeshPro Text (1)  : CanvasRenderer, TextMeshProUGUI("The margin tag can be defined in <#80ff80>pixel units</color> (px), <#80ff80>font units</color> (em) and as <#80ff80>percentage</color> (%) of the width of the text container."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+- TextMeshPro (inactive)  : MeshRenderer, MeshFilter, TextMeshPro("<line-height=1.5em><size=125%><u><align=center><#80ff80>The <smallcaps></color>TextMesh<#40A0FF>Pro</color><#80ff80></smallcaps> Margin Tag</color></u></size></align>
+</line-height><margin=5%>Example of using the <<#FFFF00>margin=5%</color>> tag which defines the left and right margin of a line or paragraph of text.</margin>
+
+<margin-left=15%>You can also use the <<#FFFF00>margin-left=15%</color>> tag to independently control the left margin.</margin>
+
+<margin-right=15%>Or use the <<#FFFF00>margin-right=15%</color>> tag to control the right margin.</margin>"), CanvasRenderer, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/10 - Bullets & Numbered List Example.unity   (name: 10 - Bullets & Numbered List Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("This is an example of using the <#ffff80><indent></color> tag in TextMesh<#40a0ff>Pro</color> to create bullets and numbered lists.
+
+<sprite="DropCap Numbers" index=11><indent=3em>For these bullets, I am making creative use of the <#ffff80><sprite></color> tag to use sprites instead of plain bullets or numbers.</indent>
+
+<sprite="DropCap Numbers" index=12><indent=3em>By using the <#ffff80><indent></color> tag, we can indent the text to make room for the sprites.
+
+\u2022<indent=4em>Multiple levels of indentation is also possible.</indent>
+
+\u2022<indent=4em>This is placeholder text for another sub item in our list.</indent></indent>
+
+<sprite="DropCap Numbers" index=13><indent=3em>Using the <#ffff80><noparse></indent></noparse></color> tag, we can go back to the previous level of indentation.</indent>
+
+Despite the sophisticated layout of this text, the use of sprites and indentation, this is still a single text object."), 
+    - TMP SubMeshUI [TextMeshPro/Sprite]  : CanvasRenderer, TMP_SubMeshUI, 
+    - TMP SubMeshUI [TextMeshPro/Sprite]  : CanvasRenderer, TMP_SubMeshUI, 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/11 - The Style Tag.unity   (name: 11 - The Style Tag)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - Frame  : 
+    - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<line-height=1.5em><size=125%><u><align=center>The<#80ff80> Style</color> Tag in <smallcaps>TextMesh<#40A0FF>Pro</color></smallcaps></u></size></align>
+</line-height>The <<#FFFF00>style="custom style name"</color>> tag makes it possible to define custom styles which combine several tags into a single one for convenience.
+
+Using <<#FFFF00>style="H1"</color>> for instance sets the text to <<#FFFF00>size=2em</color>><<#FFFF00>b</color>><<#FFFF00>#40ff80</color>>.
+
+<style="H1">H1<style="H2"> H2 <style="H3">H3</style></style></style>
+
+Style are defined in the <#80ff80>TMP Default Style Sheet</color>."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/12 - Link Example.unity   (name: 12 - Link Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<u><align=center>Text <#80ff80>Interactions</color> in <smallcaps>TextMesh<#40A0FF>Pro</color></smallcaps></u></size></align>
+
+The <<#ffff00>link="id"</color>><link="id_01><u><i><#80ff80>Insert link text here</u></i></color></link> <<#ffff00>/link</color>> tag allows adding <link="id_02"><u><i><#80ff80>links</color></i></u></link> within a text object in <font="Bangers SDF">TextMesh<#40a0ff>Pro!</font>"), TMP_TextInfoDebugTool, TMP_TextSelector_B, 
+    - TMP SubMeshUI [Bangers SDF - Drop Shadow]  : CanvasRenderer, TMP_SubMeshUI, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Select Words or Links to interact with them or Hold Shift Key to interact with individual Characters."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/12a - Text Interactions.unity   (name: 12a - Text Interactions)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- TextMeshPro  : MeshRenderer, TextMeshPro("See the <link="ID_01"><u><#40A0FF>online documentation</color></u></link> for more information <a href="http://url...">about this product</a> \U0001F60A"), TMP_TextInfoDebugTool, TMP_TextEventHandler, MeshFilter, 
+- Canvas (inactive)  : Canvas(ScreenSpaceCamera), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("See the <link="ID_01"><u><#40A0FF>online documentation</color></u></link> for more information <u><link="ID_02">about this product</link></u>."), TMP_TextInfoDebugTool, TMP_TextEventHandler, 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+- Event Processor  : TMP_TextEventCheck, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/13 - Soft Hyphenation.unity   (name: 13 - Soft Hyphenation)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Using <#80ff80>Hy\u00ADphen\u00ADa\u00ADtion</color> can help <#80ff80>im\u00ADprove</color> the <#80ff80>read\u00ADability</color> of text. This is a <#ffff80>well-known</color> fact."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity   (name: 14 - Multi Font & Sprites)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- TextMeshPro  : MeshRenderer, TextMeshPro("Use <font="Anton SDF" material="Anton SDF - Drop Shadow"><#ffff80>multiple fonts</color></font> and <#ffff80>Sprites</color> <sprite=1> per text object."), MeshFilter, 
+  (+2 plain mesh/collider objects)
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/15 - Inline Graphics & Sprites.unity   (name: 15 - Inline Graphics & Sprites)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Example <sprite=2> of using <sprite=7> <#ffa000>Graphics Inline</color> <sprite=5> with Text in <smallcaps>TextMesh</smallcaps><#40a0ff>Pro</color><sprite=0> and Unity 4.6 & 5.x <sprite=2>"), TeleType, 
+    - TMP SubMeshUI [TMPro/Sprite]  : CanvasRenderer, TMP_SubMeshUI, 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/16 - Linked text overflow mode example.unity   (name: 16 - Linked text overflow mode example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text - Master  : CanvasRenderer, TextMeshProUGUI("The <#ffff80>Linked</color> Overflow text mode makes it possible to <#ffff80>link</color> text objects together to allow text to flow from one object to another.
+
+As the text fills a given text container, the text exceeding this container will automatically flow to the <#ffff80>linked</color> text object.
+
+This feature is located in the text Overflow options and available with both TextMeshPro components.
+
+The text Overflow - Linked mode makes it possible to create sophisticated text layout similar to those seen in magazines and web pages."), 
+  - Image 1  : CanvasRenderer, RawImage, 
+  - TextMeshPro Text - Linked 1  : CanvasRenderer, TextMeshProUGUI("The <#ffff80>Linked</color> Overflow text mode makes it possible to <#ffff80>link</color> text objects together to allow text to flow from one object to another.
+
+As the text fills a given text container, the text exceeding this container will automatically flow to the <#ffff80>linked</color> text object.
+
+This feature is located in the text Overflow options and available with both TextMeshPro components.
+
+The text Overflow - Linked mode makes it possible to create sophisticated text layout similar to those seen in magazines and web pages."), 
+  - TextMeshPro Text - Linked 2  : CanvasRenderer, TextMeshProUGUI("The <#ffff80>Linked</color> Overflow text mode makes it possible to <#ffff80>link</color> text objects together to allow text to flow from one object to another.
+
+As the text fills a given text container, the text exceeding this container will automatically flow to the <#ffff80>linked</color> text object.
+
+This feature is located in the text Overflow options and available with both TextMeshPro components.
+
+The text Overflow - Linked mode makes it possible to create sophisticated text layout similar to those seen in magazines and web pages."), 
+  - Image 2  : CanvasRenderer, RawImage, 
+  - TextMeshPro Text - Linked 3  : CanvasRenderer, TextMeshProUGUI("The <#ffff80>Linked</color> Overflow text mode makes it possible to <#ffff80>link</color> text objects together to allow text to flow from one object to another.
+
+As the text fills a given text container, the text exceeding this container will automatically flow to the <#ffff80>linked</color> text object.
+
+This feature is located in the text Overflow options and available with both TextMeshPro components.
+
+The text Overflow - Linked mode makes it possible to create sophisticated text layout similar to those seen in magazines and web pages."), 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/17 - Old Computer Terminal.unity   (name: 17 - Old Computer Terminal)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - Panel  : CanvasRenderer, Image, 
+    - Panel  : CanvasRenderer, Image, Mask, 
+      - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("This is an example of using the <#ffffff>TextMesh<#40a0ff>Pro</color></color> <#ffff00>maxVisibleCharacters</color> and <#ffff00>maxVisibleLines</color> properties to control how many characters or lines of text will be displayed. This can be used to create <#80ff80>Reveal</color> or <#80ff80>Teletype FX</color> or even to simulate an <#80ff80>Old Computer Terminal</color>.
+
+This implementation does not involve any string manipulations and thus is allocation free. It also works with word wrapping to avoid cutting off words as they are revealed. This also supports the numerous rich text tags available in <#ffffff>TextMesh<#40a0ff>Pro</color></color>."), TextConsoleSimulator, 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/18 - ScrollRect & Masking & Layout.unity   (name: 18 - ScrollRect & Masking & Layout)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas TMP  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, TMP_UiFrameRateCounter, 
+  - Anchor  : 
+    - Panel  : CanvasRenderer, Image, 
+    - Scroll Rect  : CanvasRenderer, Image, ScrollRect, RectMask2D, 
+      - Panel  : CanvasRenderer, Image, VerticalLayoutGroup, ContentSizeFitter, 
+        - Question  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<align=center><u><font="Anton SDF">Question 1</font></u></align>
+Example of using Unity's New UI and Layout components along with Masking with <size=110%><font="Bangers SDF">TextMesh<#0040ff>Pro</color>!</font>"), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+            - TMP SubMeshUI [Bangers SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+        - Answer A  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<font="Anton SDF">A.</font><indent=1em>Each block of text is using the <<#ffff00>indent</color>> tag to nicely align the bullets and text."), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+        - Answer B  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<font="Anton SDF">B.</font><indent=1em><#ffff00>Multiple fonts</color> are used to display the text. One for the bullets and the other for the rest of the text."), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+        - Answer C  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<font="Anton SDF">C.</font><indent=1em>Sprites <sprite=2 tint=0> can be used as well inline with the text."), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+            - TMP SubMeshUI [TextMeshPro/Sprite]  : CanvasRenderer, TMP_SubMeshUI, 
+        - Answer D  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<font="Anton SDF">D.</font><indent=1em><#ff0000>You selected the wrong answer."), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+        - Answer E  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<font="Anton SDF">E.</font><indent=1em>This block of text contains three lines of text. The second line ends up outside the scrolling area."), 
+            - TMP SubMeshUI [Anton SDF Material]  : CanvasRenderer, TMP_SubMeshUI, 
+- Canvas UI Text (inactive)  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, TMP_UiFrameRateCounter, 
+  - Anchor  : 
+    - Panel  : CanvasRenderer, Image, 
+    - Scroll Rect  : CanvasRenderer, Image, ScrollRect, RectMask2D, 
+      - Panel  : CanvasRenderer, Image, VerticalLayoutGroup, ContentSizeFitter, 
+        - Question  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("<b>Question 1</b>
+This is an example of using Ui.Text in Unity to display text using the New UI's auto layout functionality."), 
+        - Answer A  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("A. This block of text contains three lines of text which requires the container to dynamically expand vertically."), 
+        - Answer B  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("B. Indent Tag allows multiple lines of text to be nicely aligned with the bullets."), 
+        - Answer C  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("C. This block of text contains one line of text."), 
+        - Answer D  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("D.<color=#ff0000>You selected the wrong answer</color>."), 
+        - Answer E  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+          - Text  : CanvasRenderer, Text("E. This block of text contains three lines of text. The second line ends up outside the scrolling area."), 
+- Side by Side (inactive)  : 
+  - Canvas TMP  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, TMP_UiFrameRateCounter, 
+    - Anchor  : 
+      - Panel  : CanvasRenderer, Image, 
+      - Scroll Rect  : CanvasRenderer, Image, ScrollRect, RectMask2D, 
+        - Panel  : CanvasRenderer, Image, VerticalLayoutGroup, ContentSizeFitter, 
+          - Question  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("<align=center><b><u>Question 1</u></b></align>
+This is an example of using <u>TextMeshPro</u> in Unity to display text using the New UI's auto layout functionality."), 
+          - Answer A  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("A.<indent=4em>This block of text contains three lines of text which requires the container to dynamically expand vertically."), 
+          - Answer B  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("B.<indent=4em>Indent Tag allows multiple lines of text to be nicely aligned with the bullets."), 
+          - Answer C  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("C.<indent=4em>This block of text contains one line of text."), 
+          - Answer D  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("D.<indent=4em><#ff0000>You selected the wrong answer."), 
+          - Answer E  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("E.<indent=4em>This block of text contains three lines of text. The second line ends up outside the scrolling area."), 
+  - Canvas UI Text (inactive)  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, TMP_UiFrameRateCounter, 
+    - Anchor  : 
+      - Panel  : CanvasRenderer, Image, 
+      - Scroll Rect  : CanvasRenderer, Image, ScrollRect, RectMask2D, 
+        - Panel  : CanvasRenderer, Image, VerticalLayoutGroup, ContentSizeFitter, 
+          - Question  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("<b>Question 1</b>
+This is an example of using Ui.Text in Unity to display text using the New UI's auto layout functionality."), 
+          - Answer A  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("A. This block of text contains three lines of text which requires the container to dynamically expand vertically."), 
+          - Answer B  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("B. Indent Tag allows multiple lines of text to be nicely aligned with the bullets."), 
+          - Answer C  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("C. This block of text contains one line of text."), 
+          - Answer D  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("D.<color=#ff0000>You selected the wrong answer</color>."), 
+          - Answer E  : CanvasRenderer, Image, Button, VerticalLayoutGroup, LayoutElement, 
+            - Text  : CanvasRenderer, Text("E. This block of text contains three lines of text. The second line ends up outside the scrolling area."), 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/19 - Masking Texture & Soft Mask.unity   (name: 19 - Masking Texture & Soft Mask)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+  - Image  : CanvasRenderer, Image, RectMask2D, 
+    - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Soft Masking
+<size=25%>Move the text object relative to the parent with the 2D Rect Mask.</size>"), 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/20 - Input Field with Scrollbar.unity   (name: 20 - Input Field with Scrollbar)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), CanvasScaler(ConstantPixelSize, 800x600, match 0), GraphicRaycaster, 
+  - TMP InputField + Scrollbar  : CanvasRenderer, Image, TMP_InputField, 
+    - Text Area  : RectMask2D, 
+      - Placeholder  : CanvasRenderer, TextMeshProUGUI("Enter text..."), 
+      - Text  : CanvasRenderer, TextMeshProUGUI("This is an example of using a <#ff4f00>Scrollbar</color> with the <b><size=150%>TextMesh<#4080ff>Pro</color></size></b> Text Input Field.
+
+The Scrollbar position and size adjusts automatically as new text is added.
+
+The Home and End keys move the caret to the start or end of each line.
+
+You can now also use Page Up and Page Down to navigate through the text.
+
+Holding down shift allows for multiple lines of text to be selected.
+
+Double clicks on words to select them.​"), 
+    - Scrollbar  : CanvasRenderer, Image, Scrollbar, 
+      - Sliding Area  : 
+        - Handle  : CanvasRenderer, Image, 
+  - Simple Chat  : 
+    - Chat Input Field  : CanvasRenderer, Image, TMP_InputField, 
+      - Text Area  : RectMask2D, 
+        - Placeholder  : CanvasRenderer, TextMeshProUGUI("Enter text..."), 
+        - Text  : CanvasRenderer, TextMeshProUGUI("​"), 
+    - Chat Output - Scrollview  : ScrollRect, CanvasRenderer, Image, 
+      - Viewport  : RectMask2D, 
+        - Content  : 
+          - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI(""), ContentSizeFitter, 
+      - Scrollbar Vertical  : CanvasRenderer, Image, Scrollbar, 
+        - Sliding Area  : 
+          - Handle  : CanvasRenderer, Image, 
+    - Chat Controller  : ChatController, 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity   (name: 21 - Script Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Simple Script  : SimpleScript, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/22 - Basic Scripting Example.unity   (name: 22 - Basic Scripting Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceCamera), GraphicRaycaster, 
+  - Text Object #1  : TMP_ExampleScript_01, 
+- EventSystem  : EventSystem, StandaloneInputModule, TouchInputModule, 
+- Text Object #2  : TMP_ExampleScript_01, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/23 - Animating Vertex Attributes.unity   (name: 23 - Animating Vertex Attributes)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Animating Vertex Attributes"), VertexJitter, VertexColorCycler, 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/24 - Surface Shader Example URP.unity   (name: 24 - Surface Shader Example URP)
+AudioListeners in scene: 1
+- Camera Anchor  : 
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Directional light  : Light, UniversalAdditionalLightData, 
+- Ground  : MeshFilter, MeshRenderer, 
+- Main Camera [tag MainCamera]  : Camera, AudioListener, TMP_FrameRateCounter, CameraController, UniversalAdditionalCameraData, 
+- Pointlight - Group  : 
+  - Point Light - Blue  : Light, ObjectSpin, UniversalAdditionalLightData, 
+  - Point Light - Green  : Light, ObjectSpin, UniversalAdditionalLightData, 
+  - Point Light - Red  : Light, ObjectSpin, UniversalAdditionalLightData, 
+- Spotlight - Backlight  : Light, ObjectSpin, UniversalAdditionalLightData, 
+- Spotlight - Group (inactive)  : 
+  - Spotlight - Blue  : Light, ObjectSpin, UniversalAdditionalLightData, 
+  - Spotlight - Green  : Light, ObjectSpin, UniversalAdditionalLightData, 
+  - Spotlight - Red  : Light, ObjectSpin, UniversalAdditionalLightData, 
+- Spotlight - White (inactive)  : Light, ObjectSpin, UniversalAdditionalLightData, 
+- TextMesh Pro - Caption  : MeshRenderer, TextMeshPro("The Ultimate Text Solution for Unity"), MeshFilter, 
+- TextMesh Pro - Text  : MeshRenderer, TextMeshPro("<size=125%>T</size>ext<size=125%>M</size>esh<sup> <#50aaff>PRO!</color></sup>"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/24 - Surface Shader Example.unity   (name: 24 - Surface Shader Example)
+AudioListeners in scene: 1
+- Camera Anchor  : 
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Crate Group  : 
+  (+3 plain mesh/collider objects)
+- Directional light  : Light, 
+- Ground  : MeshFilter, MeshRenderer, 
+- Main Camera [tag MainCamera]  : Camera, AudioListener, TMP_FrameRateCounter, CameraController, 
+- Pointlight - Group  : 
+  - Point Light - Blue  : Light, ObjectSpin, 
+  - Point Light - Green  : Light, ObjectSpin, 
+  - Point Light - Red  : Light, ObjectSpin, 
+- Spotlight - Backlight  : Light, ObjectSpin, 
+- Spotlight - Group (inactive)  : 
+  - Spotlight - Blue  : Light, ObjectSpin, 
+  - Spotlight - Green  : Light, ObjectSpin, 
+  - Spotlight - Red  : Light, ObjectSpin, 
+- Spotlight - White (inactive)  : Light, ObjectSpin, 
+- TextMesh Pro - Caption  : MeshRenderer, TextMeshPro("The Ultimate Text Solution for Unity"), MeshFilter, 
+- TextMesh Pro - Text  : MeshRenderer, TextMeshPro("<size=125%>T</size>ext<size=125%>M</size>esh<sup> <#50aaff>PRO!</color></sup>"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/25 - Sunny Days Example.unity   (name: 25 - Sunny Days Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, 
+  - TextMeshPro Text  : CanvasRenderer, TextMeshProUGUI("Sunny Days!"), WarpTextExample, 
+    - TMP SubMeshUI [IMPACT SDF - Sunny Days + LiberationSans SDF Atlas]  : CanvasRenderer, TMP_SubMeshUI, 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/26 - Dropdown Placeholder Example.unity   (name: 26 - Dropdown Placeholder Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Canvas  : Canvas(ScreenSpaceOverlay), GraphicRaycaster, DropdownSample, 
+  - DropdownWithoutPlaceholder  : CanvasRenderer, Image, TMP_Dropdown, 
+    - Label  : CanvasRenderer, TextMeshProUGUI("Option A"), 
+    - Arrow  : CanvasRenderer, Image, 
+    - Template (inactive)  : CanvasRenderer, Image, ScrollRect, 
+      - Viewport  : Mask, CanvasRenderer, Image, 
+        - Content  : 
+          - Item  : Toggle, 
+            - Item Background  : CanvasRenderer, Image, 
+            - Item Checkmark  : CanvasRenderer, Image, 
+            - Item Label  : CanvasRenderer, TextMeshProUGUI("Option A"), 
+      - Scrollbar  : CanvasRenderer, Image, Scrollbar, 
+        - Sliding Area  : 
+          - Handle  : CanvasRenderer, Image, 
+  - DropdownWithPlaceholder  : CanvasRenderer, Image, TMP_Dropdown, 
+    - Label  : CanvasRenderer, TextMeshProUGUI(""), 
+    - Placeholder  : CanvasRenderer, TextMeshProUGUI("Please make a selection"), 
+    - Arrow  : CanvasRenderer, Image, 
+    - Template (inactive)  : CanvasRenderer, Image, ScrollRect, 
+      - Viewport  : Mask, CanvasRenderer, Image, 
+        - Content  : 
+          - Item  : Toggle, 
+            - Item Background  : CanvasRenderer, Image, 
+            - Item Checkmark  : CanvasRenderer, Image, 
+            - Item Label  : CanvasRenderer, TextMeshProUGUI("Option A"), 
+      - Scrollbar  : CanvasRenderer, Image, Scrollbar, 
+        - Sliding Area  : 
+          - Handle  : CanvasRenderer, Image, 
+  - Text  : CanvasRenderer, TextMeshProUGUI(""), 
+  - Button  : CanvasRenderer, Image, Button, 
+    - Text  : CanvasRenderer, TextMeshProUGUI("Done"), 
+- EventSystem  : EventSystem, StandaloneInputModule, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/27 - Double Pass Shader Example.unity   (name: 27 - Double Pass Shader Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, 
+- Text (TMP)  : MeshRenderer, TextMeshPro("Single Pass"), MeshFilter, 
+- Text (TMP) (1)  : MeshRenderer, TextMeshPro("Double Pass"), MeshFilter, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/28 - HDRP Shader Example.unity   (name: 28 - HDRP Shader Example)
+AudioListeners in scene: 1
+- Main Camera [tag MainCamera]  : Camera, AudioListener, MISSING_SCRIPT, 
+- Sky and Fog Volume  : Volume, 
+- Ground Plane  : MeshFilter, MeshRenderer, MeshCollider, 
+- Text (TMP) - Lit Bloom  : MeshRenderer, TextMeshPro("\uE347"), Volume, MeshFilter, 
+- Text (TMP) - Unlit  : MeshRenderer, TextMeshPro("Unlit Shader"), MeshFilter, 
+- Unity Flat Logo  : MeshFilter, MeshRenderer, BoxCollider, ObjectSpin, 
+  - Text (TMP) - Lit Plain  : MeshRenderer, TextMeshPro("\uE347"), MeshFilter, 
+- Lights  : 
+  - Point Light - Blue  : Light, MISSING_SCRIPT, ObjectSpin, 
+  - Point Light - Green  : Light, MISSING_SCRIPT, ObjectSpin, 
+  - Point Light - Red  : Light, MISSING_SCRIPT, ObjectSpin, 
+  - Spot Light - Background  : Light, MISSING_SCRIPT, ObjectSpin, 
+
+--- SCENE: Assets/TextMesh Pro/Examples & Extras/Scenes/Benchmark (Floating Text).unity   (name: Benchmark (Floating Text))
+AudioListeners in scene: 1
+- Benchmark (Shader Perf)  : Benchmark02, 
+- Directional light  : Light, 
+- Ground  : MeshFilter, MeshRenderer, 
+- Main Camera [tag MainCamera]  : Camera, AudioListener, TMP_FrameRateCounter, CameraController, 
+
+=== SCRIPTS (your .cs files, full source) ===
+
+##### Assets/Scipts/BouncePad.cs
+using UnityEngine;
+
+// Assignment 03 Part A: a second physics force, separate from knockback.
+[RequireComponent(typeof(Collider))]
+public class BouncePad : MonoBehaviour
+{
+    [SerializeField] float bounceStrength = 8f;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        Rigidbody body = other.attachedRigidbody;
+        if (body == null) return;
+
+        // Cancel downward falling speed so this pad always gives a visible bounce.
+        Vector3 v = body.linearVelocity;
+        if (v.y < 0f) body.linearVelocity = new Vector3(v.x, 0f, v.z);
+        body.AddForce(Vector3.up * bounceStrength, ForceMode.VelocityChange);
+    }
+}
+
+
+##### Assets/Scipts/CameraFollow.cs
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour
+{
+    [SerializeField] private PlayerController target;
+    [SerializeField] private Vector3 offset = new Vector3(0f, 4f, -7f);
+    [SerializeField, Min(0.01f)] private float sharpness = 5f;
+    [SerializeField, Min(0f)] private float lookAhead = 0.35f;
+    [SerializeField] private float lookHeight = 1f;
+
+    private void Awake()
+    {
+        if (target == null)
+            target = FindAnyObjectByType<PlayerController>();
+    }
+
+    private void LateUpdate()
+    {
+        if (target == null)
+        {
+            target = FindAnyObjectByType<PlayerController>();
+            if (target == null) return;
+        }
+
+        Rigidbody body = target.GetComponent<Rigidbody>();
+        if (body == null) return;
+
+#if UNITY_6000_0_OR_NEWER
+        Vector3 flatVelocity = body.linearVelocity;
+#else
+        Vector3 flatVelocity = body.velocity;
+#endif
+        flatVelocity.y = 0f;
+
+        Vector3 aim = target.transform.position
+                      + Vector3.up * lookHeight
+                      + flatVelocity * lookAhead;
+        Vector3 wanted = aim + offset;
+
+        float blend = 1f - Mathf.Exp(-sharpness * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, wanted, blend);
+        transform.LookAt(aim);
+    }
+}
+
+
+##### Assets/Scipts/Coin.cs
+using UnityEngine;
+
+public class Coin : MonoBehaviour
+{
+    [SerializeField] int value = 1;
+    [SerializeField] float spinSpeed = 90f;
+
+    bool collected;
+
+    void Update()
+    {
+        transform.Rotate(0f, spinSpeed * Time.deltaTime, 0f);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (collected || !other.CompareTag("Player") || GameManager.Instance == null)
+            return;
+
+        collected = true;
+        GameManager.Instance.AddScore(value);
+        Destroy(gameObject);
+    }
+}
+
+
+##### Assets/Scipts/Ease.cs
+public static class Ease
+{
+    public static float OutBack(float t)
+    {
+        const float c1 = 1.70158f;
+        const float c3 = c1 + 1f;
+        float u = t - 1f;
+        return 1f + c3 * u * u * u + c1 * u * u;
+    }
+}
+
+
+##### Assets/Scipts/EnemyPatrol.cs
+using UnityEngine;
+
+// Lecture 07's patrol modes, expanded to the assignment's 3 states.
+public enum PatrolMode { Loop, PingPong, Random }
+public enum EnemyState { Patrol, Chase, Return }
+
+[RequireComponent(typeof(Rigidbody))]
+public class EnemyPatrol : MonoBehaviour
+{
+    [SerializeField] Transform[] points;
+    [SerializeField] PatrolMode mode = PatrolMode.Loop;
+    [SerializeField] float speed = 2f;
+    [SerializeField] float waitTime = 0f;
+    [SerializeField] float turnSpeed = 360f;
+    [SerializeField] float arriveDistance = 0.2f;
+
+    [Header("Chase and return")]
+    [SerializeField] float chaseSpeed = 3.5f;
+    [SerializeField] float chaseRange = 4f;
+    [SerializeField] float giveUpRange = 6f;
+
+    Transform player;
+    EnemyState state = EnemyState.Patrol;
+    int index, step = 1;
+    float waitUntil;
+
+    void Awake()
+    {
+        Rigidbody body = GetComponent<Rigidbody>();
+        body.isKinematic = true;
+        body.useGravity = false;
+    }
+
+    void Start()
+    {
+        PlayerController found = FindAnyObjectByType<PlayerController>();
+        if (found != null) player = found.transform;
+        if (giveUpRange <= chaseRange) giveUpRange = chaseRange + 2f;
+    }
+
+    void Update()
+    {
+        if (points == null || points.Length < 3 || player == null) return;
+
+        float distance = Vector3.Distance(transform.position, player.position);
+        if (state != EnemyState.Chase && distance < chaseRange)
+            state = EnemyState.Chase;
+        else if (state == EnemyState.Chase && distance > giveUpRange)
+            state = EnemyState.Return;
+
+        if (state == EnemyState.Chase)
+        {
+            MoveTo(player.position, chaseSpeed);
+        }
+        else if (state == EnemyState.Return)
+        {
+            MoveTo(points[index].position, speed);
+            if (Arrived(points[index].position)) state = EnemyState.Patrol;
+        }
+        else if (Time.time >= waitUntil)
+        {
+            MoveTo(points[index].position, speed);
+            if (Arrived(points[index].position))
+            {
+                index = NextIndex();
+                waitUntil = Time.time + waitTime;
+            }
+        }
+    }
+
+    bool Arrived(Vector3 target)
+    {
+        // Assignment 03: distance tolerance, not position == target.
+        target.y = transform.position.y;
+        return Vector3.Distance(transform.position, target) < arriveDistance;
+    }
+
+    void MoveTo(Vector3 target, float moveSpeed)
+    {
+        // Keep the guard on its own height; use open patrol routes (no wall pathfinding).
+        target.y = transform.position.y;
+        Vector3 direction = target - transform.position;
+        transform.position = Vector3.MoveTowards(
+            transform.position, target, moveSpeed * Time.deltaTime);
+
+        if (direction.sqrMagnitude > 0.001f)
+        {
+            Quaternion look = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation, look, turnSpeed * Time.deltaTime);
+        }
+    }
+
+    int NextIndex()
+    {
+        if (mode == PatrolMode.Loop) return (index + 1) % points.Length;
+        if (mode == PatrolMode.PingPong)
+        {
+            if (index + step < 0 || index + step >= points.Length) step = -step;
+            return index + step;
+        }
+        int next = Random.Range(0, points.Length);
+        return next == index ? (next + 1) % points.Length : next;
+    }
+}
+
+
+##### Assets/Scipts/FallZone.cs
+using UnityEngine;
+
+// Assignment 03 Part C: a wide trigger below the platforms.
+[RequireComponent(typeof(Collider))]
+public class FallZone : MonoBehaviour
+{
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && GameManager.Instance != null)
+            GameManager.Instance.PlayerFell();
+    }
+}
+
+
+##### Assets/Scipts/GameManager.cs
+using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+// Lecture 07's single manager, expanded for Assignment 03's fall zone and HUD.
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance { get; private set; }
+
+    [Header("Per-level settings")]
+    [SerializeField] int targetScore = 10;
+    [SerializeField] int lives = 3;
+    [SerializeField] float respawnDelay = 0.6f;
+    [SerializeField] float spawnProtection = 1.5f;
+
+    [SerializeField] Health player;
+    [SerializeField] Transform respawnPoint;
+
+    [Header("TMP and panels")]
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text livesText;
+    [SerializeField] TMP_Text healthText; // Optional: otherwise hearts appear in livesText.
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject losePanel;
+
+    //[Header("Restart buttons inside the win and lose panels")]
+    //[SerializeField] Button winRestartButton;
+    //[SerializeField] Button loseRestartButton;
+
+    int score;
+    bool gameEnded;
+    bool respawning;
+
+    public bool CanCollect => !gameEnded && !respawning;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogError("Use exactly one GameManager in each scene.", this);
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        Time.timeScale = 1f;
+    }
+
+    void OnDestroy()
+    {
+        //if (winRestartButton != null)
+        //    winRestartButton.onClick.RemoveListener(RestartLevel);
+        //if (loseRestartButton != null)
+        //    loseRestartButton.onClick.RemoveListener(RestartLevel);
+
+        if (Instance == this) Instance = null;
+    }
+
+    void Start()
+    {
+        if (winPanel != null) winPanel.SetActive(false);
+        if (losePanel != null) losePanel.SetActive(false);
+
+        // Unity UI buttons still respond when Time.timeScale is 0.
+        // Assign BOTH buttons in the GameManager Inspector. No OnClick setup needed.
+        //if (winRestartButton != null)
+        //    winRestartButton.onClick.AddListener(RestartLevel);
+        //if (loseRestartButton != null)
+        //    loseRestartButton.onClick.AddListener(RestartLevel);
+
+        UpdateScoreUI();
+        UpdateUI();
+    }
+
+    public void AddScore(int amount)
+    {
+        if (gameEnded || respawning) return;
+        score += amount;
+        UpdateScoreUI(); // Only write TMP score when the score changes.
+        if (score >= targetScore) Win();
+    }
+
+    void UpdateScoreUI()
+    {
+        if (scoreText != null)
+            scoreText.text = $"Score: {score} / {targetScore}";
+    }
+
+    // Called by Health when hearts change and by this manager when lives change.
+    public void UpdateUI()
+    {
+        if (livesText != null)
+        {
+            livesText.text = $"Lives: {Mathf.Max(lives, 0)}";
+            if (healthText == null && player != null)
+                livesText.text += $"   Hearts: {Mathf.Max(0, player.Current)} / {player.Max}";
+        }
+        if (healthText != null && player != null)
+            healthText.text = $"Hearts: {Mathf.Max(0, player.Current)} / {player.Max}";
+    }
+
+    public void PlayerDied() => LoseLife();
+    public void PlayerFell() => LoseLife();
+
+    void LoseLife()
+    {
+        if (gameEnded || respawning) return;
+        respawning = true;
+        lives--;
+        UpdateUI();
+
+        PlayerController controller = player != null ? player.GetComponent<PlayerController>() : null;
+        if (controller != null) controller.StopMovement(respawnDelay);
+
+        if (lives <= 0) Lose();
+        else StartCoroutine(Respawn());
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        if (player != null && respawnPoint != null)
+        {
+            Rigidbody body = player.GetComponent<Rigidbody>();
+            if (body != null)
+            {
+                body.position = respawnPoint.position;
+                body.rotation = respawnPoint.rotation;
+                body.linearVelocity = Vector3.zero;
+                body.angularVelocity = Vector3.zero;
+            }
+            else player.transform.position = respawnPoint.position;
+
+            PlayerController controller = player.GetComponent<PlayerController>();
+            if (controller != null) controller.StopMovement();
+            player.Restore(spawnProtection);
+        }
+        respawning = false;
+    }
+
+    // Optional checkpoint; otherwise respawn at the level's start point.
+    public void SetCheckpoint(Transform point)
+    {
+        if (point != null) respawnPoint = point;
+    }
+
+    void Win()
+    {
+        if (gameEnded) return;
+        gameEnded = true;
+        if (winPanel != null) winPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    void Lose()
+    {
+        if (gameEnded) return;
+        gameEnded = true;
+        if (losePanel != null) losePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    // Used by the Restart button in BOTH the Win and Lose Canvas panels.
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f; // Always unfreeze BEFORE reloading.
+        Debug.Log("RESTART BUTTON CLICKED!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // Keep the Lecture 07 method name working for any older Inspector button events.
+    public void Restart() => RestartLevel();
+}
+
+
+##### Assets/Scipts/GameManager_03.cs
+using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager_03 : MonoBehaviour
+{
+    public static GameManager_03 Instance { get; private set; }
+
+    [SerializeField] int targetScore = 10;
+    [SerializeField] int lives = 3;
+    [SerializeField] float respawnDelay = 0.6f;
+    [SerializeField] float spawnProtection = 1.5f;
+    [SerializeField] Health player;
+    [SerializeField] Transform respawnPoint;
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text livesText;
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject losePanel;
+    [SerializeField] Transform mazeEnd;
+    [SerializeField] float winDistance = 1.5f;
+
+    bool reachedExit = false;
+
+    int score;
+    bool finished;
+    bool respawning;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    void Start()
+    {
+        if (player == null)
+            player = FindAnyObjectByType<Health>();
+
+        if (winPanel != null)
+            winPanel.SetActive(false);
+
+        if (losePanel != null)
+            losePanel.SetActive(false);
+
+        if (player == null || respawnPoint == null)
+            Debug.LogError("Assign Player and Respawn Point on GameManager.", this);
+
+        UpdateUI();
+    }
+
+    void Update()
+    {
+        if (mazeEnd == null || player == null || reachedExit)
+            { return; }
+
+        Vector3 playerPosition = player.transform.position;
+        Vector3 endPosition = mazeEnd.position;
+
+
+        playerPosition.y = 0;
+        endPosition.y = 0;
+
+        if(Vector3.Distance(endPosition, playerPosition) < winDistance)
+        {
+            reachedExit = true;
+            Win();
+        }
+    }
+
+    public void AddScore(int amount)
+    {
+        if (finished || amount <= 0)
+            return;
+
+        score += amount;
+        UpdateUI();
+
+    }
+
+    public void UpdateUI()
+    {
+        if (scoreText != null)
+            scoreText.text = $"Score: {score} / {targetScore}";
+
+        if (livesText != null && player != null)
+            livesText.text = $"Lives: {lives}   Health: {Mathf.Max(player.Current, 0)} / {player.Max}";
+    }
+
+    public void PlayerDied()
+    {
+        if (finished || respawning)
+            return;
+
+        lives--;
+        UpdateUI();
+
+        if (lives <= 0)
+        {
+            Lose();
+            return;
+        }
+
+        StartCoroutine(Respawn());
+    }
+
+    IEnumerator Respawn()
+    {
+        respawning = true;
+        yield return new WaitForSeconds(respawnDelay);
+
+        if (player == null || respawnPoint == null)
+        {
+            Debug.LogError("Cannot respawn: Player or Respawn Point is missing.", this);
+            respawning = false;
+            yield break;
+        }
+
+        Rigidbody body = player.GetComponent<Rigidbody>();
+
+        if (body != null)
+        {
+            body.position = respawnPoint.position;
+#if UNITY_6000_0_OR_NEWER
+            body.linearVelocity = Vector3.zero;
+#else
+            body.velocity = Vector3.zero;
+#endif
+            body.angularVelocity = Vector3.zero;
+        }
+        else
+        {
+            player.transform.position = respawnPoint.position;
+        }
+
+        player.Restore(spawnProtection);
+        respawning = false;
+    }
+
+    void Win()
+    {
+        if (finished)
+            return;
+
+        finished = true;
+        if (winPanel != null)
+            winPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    void Lose()
+    {
+        if (finished)
+            return;
+
+        finished = true;
+        if (losePanel != null)
+            losePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+}
+
+
+##### Assets/Scipts/Hazard.cs
+using System.Collections;
+using UnityEngine;
+
+// The same script works on spikes, guards and a timed crusher (Lecture 07).
+[RequireComponent(typeof(Collider))]
+public class Hazard : MonoBehaviour
+{
+    [SerializeField] int damage = 1;
+    [SerializeField] float knockback = 6f;
+    [SerializeField] float knockTime = 0.25f;
+
+    [Header("Timed crusher (restTime = 0 for spikes and guards)")]
+    [SerializeField] float restTime = 0f;
+    [SerializeField] float warnTime = 0.7f;
+    [SerializeField] float strikeTime = 0.4f;
+    [SerializeField] GameObject warning;
+    [SerializeField] GameObject strikeVisual;
+
+    IEnumerator Start()
+    {
+        if (restTime <= 0f) yield break;
+
+        Collider zone = GetComponent<Collider>();
+        if (warning != null) warning.SetActive(false);
+        if (strikeVisual != null) strikeVisual.SetActive(false);
+
+        while (true)
+        {
+            zone.enabled = false;
+            yield return new WaitForSeconds(restTime);
+
+            // The assignment requires a visible warning of at least 0.5 s.
+            if (warning != null) warning.SetActive(true);
+            yield return new WaitForSeconds(Mathf.Max(0.5f, warnTime));
+
+            if (warning != null) warning.SetActive(false);
+            if (strikeVisual != null) strikeVisual.SetActive(true);
+            zone.enabled = true;
+            yield return new WaitForSeconds(strikeTime);
+
+            if (strikeVisual != null) strikeVisual.SetActive(false);
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        Rigidbody body = other.attachedRigidbody;
+        if (body == null || !body.CompareTag("Player")) return;
+
+        Health health = body.GetComponent<Health>();
+        if (health == null || !health.TakeDamage(damage)) return;
+
+        Vector3 away = body.position - transform.position;
+        away.y = 0f;
+        if (away.sqrMagnitude < 0.001f)
+        {
+            away = body.transform.forward;
+            away.y = 0f;
+            if (away.sqrMagnitude < 0.001f) away = Vector3.forward;
+        }
+
+        PlayerController controller = body.GetComponent<PlayerController>();
+        if (controller != null)
+            controller.Knockback(away.normalized * knockback, knockTime);
+    }
+}
+
+
+##### Assets/Scipts/Health.cs
+using UnityEngine;
+
+// Lecture 07 hearts, i-frames and optional one-use shield.
+public class Health : MonoBehaviour
+{
+    [SerializeField] int max = 3;
+    [SerializeField] float iFrames = 1f;
+    public bool shielded;
+
+    int current;
+    float invulnerableUntil;
+
+    public int Current => current;
+    public int Max => max;
+
+    void Awake() => current = max;
+
+    // True ONLY when damage landed; Hazard then applies knockback.
+    public bool TakeDamage(int amount)
+    {
+        if (amount <= 0 || current <= 0 || Time.time < invulnerableUntil)
+            return false;
+
+        invulnerableUntil = Time.time + iFrames;
+        if (shielded)
+        {
+            shielded = false;
+            return false;
+        }
+
+        current = Mathf.Max(0, current - amount);
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.UpdateUI();
+            if (current <= 0) GameManager.Instance.PlayerDied();
+        }
+        return true;
+    }
+
+    public void Restore(float protection)
+    {
+        current = max;
+        shielded = false;
+        invulnerableUntil = Time.time + protection;
+        if (GameManager.Instance != null) GameManager.Instance.UpdateUI();
+    }
+}
+
+
+##### Assets/Scipts/PlayerController.cs
+using System.Collections;
+using UnityEngine;
+
+
+[RequireComponent(typeof(Rigidbody))]
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float speed = 5f;
+
+    Rigidbody rb;
+    Vector3 move;
+    float speedMultiplier = 1f;
+    float noControlUntil;
+    Coroutine boost;
+
+    void Awake() => rb = GetComponent<Rigidbody>();
+
+    void Update()
+    {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        move = new Vector3(h, 0f, v);
+    }
+
+    void FixedUpdate()
+    {
+
+        Vector3 direction = Vector3.ClampMagnitude(move, 1f)
+            * speed * speedMultiplier;
+
+        if (Time.time >= noControlUntil)
+            rb.linearVelocity = new Vector3(
+                direction.x, rb.linearVelocity.y, direction.z);
+    }
+
+    // Called only when a hazard has actually damaged the player.
+    public void Knockback(Vector3 push, float seconds)
+    {
+        Vector3 v = rb.linearVelocity;
+        rb.linearVelocity = new Vector3(0f, v.y, 0f);
+        rb.AddForce(push, ForceMode.Impulse);
+        noControlUntil = Time.time + seconds;
+    }
+
+    // Clear movement before/after respawning.
+    public void StopMovement(float seconds = 0f)
+    {
+        move = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        noControlUntil = Time.time + seconds;
+    }
+
+
+    public void BoostSpeed(float multiplier, float seconds)
+    {
+        if (boost != null) StopCoroutine(boost);
+        boost = StartCoroutine(Boost(multiplier, seconds));
+    }
+
+    IEnumerator Boost(float multiplier, float seconds)
+    {
+        speedMultiplier = multiplier;
+        yield return new WaitForSeconds(seconds);
+        speedMultiplier = 1f;
+        boost = null;
+    }
+}
+
+
+##### Assets/Scipts/PowerUp.cs
+using UnityEngine;
+
+public enum PowerUpType { Speed, Shield }
+
+public class PowerUp : MonoBehaviour
+{
+    [SerializeField] PowerUpType type = PowerUpType.Speed;
+    [SerializeField] float multiplier = 1.6f;
+    [SerializeField] float duration = 5f;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        if (type == PowerUpType.Speed)
+        {
+            PlayerController controller = other.GetComponent<PlayerController>();
+            if (controller == null) return;
+            controller.BoostSpeed(multiplier, duration);
+        }
+        else
+        {
+            Health health = other.GetComponent<Health>();
+            if (health == null) return;
+            health.shielded = true;
+        }
+
+        Destroy(gameObject);
+    }
+}
+
+##### Assets/Scipts/Spawner.cs
+using UnityEngine;
+
+public class Spawner : MonoBehaviour
+{
+    [SerializeField] GameObject coinPrefab;
+    [SerializeField] Transform player;
+    [SerializeField] float interval = 1.5f;
+    [SerializeField] int maxCoins = 5;
+    [SerializeField] float area = 7f;
+
+    void Start()
+    {
+        if (coinPrefab == null || player == null)
+        {
+            Debug.LogError("Spawner needs a Coin Prefab and Player reference.", this);
+            return;
+        }
+
+        InvokeRepeating(nameof(SpawnCoin), 1f, Mathf.Max(0.1f, interval));
+    }
+
+    void SpawnCoin()
+    {
+        if (transform.childCount >= maxCoins)
+            return;
+
+        float x = Random.Range(-area, area);
+        float z = Random.Range(-area, area);
+        Vector3 pos = transform.position + new Vector3(x, 0.5f, z);
+
+        if (Vector3.Distance(pos, player.position) < 2f)
+            return;
+
+        Instantiate(coinPrefab, pos, Quaternion.identity, transform);
+    }
+}
+

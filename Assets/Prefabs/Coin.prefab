@@ -127,3 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   value: 1
   spinSpeed: 90
+  pickupSound: {fileID: 8300000, guid: 6720d537abaf4924e95c77b554be3008, type: 3}
+  sparklePrefab: {fileID: 1340143407523531939, guid: 3813943d71d94e540a8e46dcdb00e2a5, type: 3}

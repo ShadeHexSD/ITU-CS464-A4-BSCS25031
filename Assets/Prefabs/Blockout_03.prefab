@@ -2068,18 +2068,13 @@ MonoBehaviour:
   lives: 3
   respawnDelay: 0.6
   spawnProtection: 1.5
-  player: {fileID: 8663072205253619165}
+  player: {fileID: 0}
   respawnPoint: {fileID: 480146512885687368}
   scoreText: {fileID: 8583284052648738208}
   livesText: {fileID: 6818122819649676454}
-  timerText: {fileID: 0}
+  healthText: {fileID: 0}
   winPanel: {fileID: 7572639126893262989}
   losePanel: {fileID: 2010724920553404640}
-  winByReachingExit: 1
-  mazeEnd: {fileID: 7310323079065703372}
-  winDistance: 1.5
-  useTimer: 0
-  timeLimit: 90
 --- !u!1 &6527549505256951171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,17 +3550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ecb2a9f2b080c4681fcbcf04adab9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
---- !u!114 &8663072205253619165 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -3638658724076369444, guid: 4f5b4c0627ef1904ba5787b00e51033e, type: 3}
-  m_PrefabInstance: {fileID: 3871276463147639809}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec59a1ea1aa6cbe45ad7cfba8d06e33d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
 --- !u!1001 &3964797482604079031
 PrefabInstance:
   m_ObjectHideFlags: 0
