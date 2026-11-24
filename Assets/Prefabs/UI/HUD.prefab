@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 6951083090866555988}
   - component: {fileID: 5359800291715790210}
   - component: {fileID: 2289577528472299745}
+  - component: {fileID: 7278431531759733772}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -241,6 +242,7 @@ MonoBehaviour:
   loadingPanel: {fileID: 1665851981212723398}
   progressBar: {fileID: 521970180208023401}
   lastInPlayOrder: 6
+  minDisplayTime: 0.35
 --- !u!114 &5359800291715790210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +278,19 @@ MonoBehaviour:
   winClip: {fileID: 8300000, guid: 946eb0fd5a90391418d27017d7e31fd6, type: 3}
   loseClip: {fileID: 8300000, guid: e67618fede4f3b6499059587bad270a6, type: 3}
   loader: {fileID: 6951083090866555988}
+--- !u!114 &7278431531759733772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885067887420264179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f49f4df1cdcc34e92fae58d8eecd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiClickSounds
+  click: {fileID: 8300000, guid: c452bb5be2e4cab4182e738452d5c1ae, type: 3}
 --- !u!1 &1665851981212723398
 GameObject:
   m_ObjectHideFlags: 0

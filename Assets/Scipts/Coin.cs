@@ -4,6 +4,8 @@ public class Coin : MonoBehaviour
 {
     [SerializeField] int value = 1;
     [SerializeField] float spinSpeed = 90f;
+    [SerializeField] AudioClip pickupSound;
+    [SerializeField] GameObject sparklePrefab;
 
     bool collected;
 
@@ -21,6 +23,18 @@ public class Coin : MonoBehaviour
 
         // Lecture event for ScoreListener & HUD
         GameEvents.RaiseCoinCollected(value);
+
+        // Lecture 09 requirement: play pickup through SfxPlayer (not on destroyed object)
+        if (SfxPlayer.Instance != null && pickupSound != null)
+        {
+            SfxPlayer.Instance.Play(pickupSound);
+        }
+
+        // Particle effect (Commit 7)
+        if (sparklePrefab != null)
+        {
+            Instantiate(sparklePrefab, transform.position, Quaternion.identity);
+        }
 
         // Keep backwards compatibility with GameManager if present
         if (GameManager.Instance != null)

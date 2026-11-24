@@ -136,10 +136,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1212444468444883903, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212444468444883903, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212444468444883903, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2114142876267878705, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4762107219245494667, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 950367174}
     - target: {fileID: 5196243159660526291, guid: f58399b6657dca241a5e49bbb1a4653b, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294439147
@@ -336,6 +352,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5622078658627044844, guid: 093fe839515f0c94da505bc9b6263ea7, type: 3}
   m_PrefabInstance: {fileID: 1033648450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &950367174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2266126048057878157, guid: 093fe839515f0c94da505bc9b6263ea7, type: 3}
+  m_PrefabInstance: {fileID: 1033648450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3a1bf9fdd239a4592834de4b57ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
 --- !u!1001 &1033648450
 PrefabInstance:
   m_ObjectHideFlags: 0
